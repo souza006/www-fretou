@@ -1,0 +1,104 @@
+# www-fretou
+
+`Breve descrição do projeto.`
+
+## Início
+
+Estas instruções permitem que você obtenha uma cópia do projeto e configure
+em seu computador para desenvolvimento e testes.
+
+
+### Pré-requisitos
+
+Para baixar, compilar e executar em seu computador, você deve ter:
+
+- Sistema de controle de versões `git` ([https://www.git-scm.com/])
+- Kit de desenvolvimento JAVA `jdk-8` ([https://java.com/pt_BR/])
+- Simple build tool `sbt` ([https://www.scala-sbt.org/])
+
+### Instalação
+
+##### Ubuntu Linux
+
+**Importante**: É aconselhável fazer um _update_ do `apt-get`:
+```sh
+sudo apt-get update
+```
+
+- git
+
+```sh
+sudo apt-get install git
+```
+
+- jdk-8
+
+```sh
+sudo apt-get install openjdk-8-jdk
+```
+
+- sbt (Necessário: `git`, `jdk`, `gnupg2`, `apt-transport-https`)
+
+```sh
+sudo apt-get install gnupg2
+sudo apt-get install apt-transport-https
+echo "deb https://dl.bintray.com/sbt/debian /" | sudo tee -a /etc/apt/sources.list.d/sbt.list
+sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 2EE0EA64E40A89B84B2DF73499E82A75642AC823
+sudo apt-get update
+sudo apt-get install sbt
+```
+
+### Clonar o repositório
+
+Para realizar um clone do projeto, execute:
+
+```sh
+git clone https://gitlab.devops.ifrn.edu.br/tads.cnat/pdsweb/2019-1/www-fretou.git
+cd www-fretou
+```
+
+O clone do git cria um diretório chamado `www-fretou` se não for informado um
+nome de diretório.
+
+### Executar em modo desenvolvimento
+
+#### Banco de dados local
+
+O projeto está configurado para acessar uma base de dados PostreSQL. Você pode
+configurar um banco de dados em seu computador. Para isso crie um banco de dados `pgdb`, cujo dono é o usuário chamado
+`pguser` com permissões de criação de tabelas e senha `pgpasswd`.
+
+#### Imagem docker do PostgreSQL
+
+Você pode usar uma imagem `docker` do PostreSQL como servidor local do Banco
+de dados. Para iniciar uma imagem já configurada para o banco execute o _script_
+local `docker_run_postgres.sh`.
+
+```sh
+./docker_run_postgres.sh
+```
+
+#### Executar
+
+Para executar em modo de desenvolvimento, com o banco de dados funcionando,
+no diretório do projeto, digite
+
+```sh
+sbt run
+```
+
+## Documentação
+
+Verifique o diretório [`doc`](./doc/) para a documentação do sistema
+
+## Contribuindo
+
+Veja o arquivo [CONTRIBUTING.md](CONTRIBUTING.md) para maiores detalhes.
+
+## Equipe de desenvolvimento
+
+* **NOME COMPLETO** - *email@dominio.com*
+
+## Licença
+
+Este projeto é licenciado pela GNU [GPL 3](LICENSE.md).
