@@ -1,0 +1,21 @@
+# docker-compose.yml
+#
+# Configuração para execução em container da
+# infra-estrutura de 'devops' do IFRN
+#
+# Autor : Jorgiano Vidal
+# Data  : 02/03/2019
+#
+# IMPORTANTE: Não modifique este arquivo se não tem CERTEZA do que está fazendo.
+#
+
+version: '2'
+services:
+  web:
+    image: nexus.devops.ifrn.edu.br/{{ repository }}:latest
+    ports:
+      - "{{ port }}:9000"
+    restart: always
+    environment:
+      LANG: "C.UTF-8"
+      TZ: "America/Recife"

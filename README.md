@@ -62,26 +62,8 @@ nome de diretório.
 
 ### Executar em modo desenvolvimento
 
-#### Banco de dados local
-
-O projeto está configurado para acessar uma base de dados PostreSQL. Você pode
-configurar um banco de dados em seu computador. Para isso crie um banco de dados `pgdb`, cujo dono é o usuário chamado
-`pguser` com permissões de criação de tabelas e senha `pgpasswd`.
-
-#### Imagem docker do PostgreSQL
-
-Você pode usar uma imagem `docker` do PostreSQL como servidor local do Banco
-de dados. Para iniciar uma imagem já configurada para o banco execute o _script_
-local `docker_run_postgres.sh`.
-
-```sh
-./docker_run_postgres.sh
-```
-
-#### Executar
-
-Para executar em modo de desenvolvimento, com o banco de dados funcionando,
-no diretório do projeto, digite
+Para executar em modo de desenvolvimento,
+no diretório do projeto, digite:
 
 ```sh
 sbt run
