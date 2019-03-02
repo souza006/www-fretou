@@ -7,7 +7,7 @@ deve ser integralmente seguido neste projeto.
 ## Início de uma discussão
 
 Uma _issue_ deve ser aberta na lista de _issues_ do projeto no __gitlab__ do IFRN, que hospeda
-este projeto em https://gitlab.devops.ifrn.edu.br/tads.cnat/pdsweb/projetowebexemplo/issues.
+este projeto em https://gitlab.devops.ifrn.edu.br/tads.cnat/pdsweb/2019-1/www-fretou/issues.
 
 *  Antes de abrir uma nova _issue_ verifique se sua sugestão já foi feita nas _issues_
 abertas.
