@@ -1,6 +1,6 @@
 # www-fretou
 
-`Breve descrição do projeto.`
+`O Fretou é uma aplicação web que facilita e agiliza entre clientes e frentistas, de maneira intuitiva e clara.`
 
 ## Início
 
