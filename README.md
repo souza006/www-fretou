@@ -79,17 +79,17 @@ Veja o arquivo [CONTRIBUTING.md](CONTRIBUTING.md) para maiores detalhes.
 
 ## Equipe de desenvolvimento
 
-* **Daniel Souza Affonso Ferreira - daniel.souza.af@gmail.com *
+* **Daniel Souza Affonso Ferreira** - *daniel.souza.af@gmail.com*
 
-* **David Héricles de Lima Silva - david_hericles@hotmail.com *
+* **David Héricles de Lima Silva** - *david_hericles@hotmail.com*
 
-* **Eduardo Riev da Silva Oliveira - eduardoriev12@gmail.com *
+* **Eduardo Riev da Silva Oliveira** - *eduardoriev12@gmail.com*
 
-* **Elvis Silva de Souza - souzalelvis33@gmail.com *
+* **Elvis Silva de Souza** - *souzalelvis33@gmail.com*
 
-* **Esther Aragão da Silva Santana - estheraragaos@gmail.com *
+* **Esther Aragão da Silva Santana** - *estheraragaos@gmail.com*
 
-* **Herikle Mesquita Freire de Lima - herikle.mesquita@gmail.com *
+* **Herikle Mesquita Freire de Lima** - *herikle.mesquita@gmail.com*
 ## Licença
 
 Este projeto é licenciado pela GNU [GPL 3](LICENSE.md).
