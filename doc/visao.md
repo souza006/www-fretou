@@ -29,9 +29,13 @@
 
 ### 2.2 Requisitos não funcionais
 
-| Cod. | Nome | Descrição | Categoria |
+| Cod. | Nome | Descrição | Categoria | Obrigatoriedade| Permanência |
 | -------- | -------- | -------- | -------- |
-| NF01 | Nome do Requisito |	Texto descrevendo o requisito |	Desejável\Obrigatório|
+| NF01 | Interface Web |	Deve funcionar em uma plataforma web |	Interface | Obrigatório | Permanente |
+| NF02 | Interface Mobile |	Deve funcionar em uma plataforma mobile |	Interface | Desejável | Transitório |
+| NF03 | Tecnologias de Desenvolvimento |	Será desenvolvido usando o Play Framework na linguagem Java e HTML5 / JavaScript / CSS. |	Implementação | Obrigatório | Transitório |
+| NF04 | Restrição de Propostas |	Permitir que motoristas enviem propostas a um trabalho |	Especificação | Obrigatório | Transitório |
+| NF05 | Restrição de Trabalhos |	Permitir que os usuários logados vejam, criem ou apaguem trabalhos |	Especificação | Obrigatório | Transitório |
 
 ### 2.3 Tabela de Referência - Requisitos
 
