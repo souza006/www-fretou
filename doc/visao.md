@@ -15,13 +15,27 @@
 
 | Cod. | Nome | Descrição | Categoria |
 | -------- | -------- | -------- | -------- |
-| F01 | Nome do Requisito |	Texto descrevendo o requisito |	Evidente\Oculto|
+| F01 | Cadastrar usuários |	O sistema deve permitir que os usuários se cadastrem no mesmo. |	Evidente |
+| F02 | Fazer Login |	O sistema deve permitir que os usuários entrem no sistema usando suas credenciais. |	Evidente |
+| F03 | Recuperar senha |	O sistema deve permitir que os usuários recuperem suas senhas, se necessário. |	Evidente |
+| F04 | Listar trabalhos |	O sistema deve gerar uma lista de trabalhos disponíveis para o motorista. |	Evidente |
+| F05 | Cadastrar trabalho |	O sistema deve permitir o usuário cadastrar um novo trabalho. |	Evidente |
+| F06 | Ver trabalho |	O sistema deve permitir ver os detalhes de um trabalho específico antes de aceitá-lo. |	Evidente |
+| F07 | Enviar proposta |	 O sistema deve permitir o motorista de enviar uma proposta para um trabalho. |	Evidente |
+| F08 | Cancelar proposta |	O sistema deve permitir o motorista cancelar uma proposta já enviada. |	Evidente |
+| F09 | Notificar sobre proposta |	O sistema deve notificar por e-mail o usuário sobre uma nova proposta. |	Oculto |
+| F10 | Ver proposta |	O sistema deve permitir o usuário ver detalhes de uma proposta enviada. |	Evidente |
+| F11 | Recusar proposta |	O sistema deve permitir o usuário recusar uma proposta enviada. |	Evidente |
 
 ### 2.2 Requisitos não funcionais
 
-| Cod. | Nome | Descrição | Categoria |
-| -------- | -------- | -------- | -------- |
-| NF01 | Nome do Requisito |	Texto descrevendo o requisito |	Desejável\Obrigatório|
+| Cod. | Nome | Descrição | Categoria | Obrigatoriedade| Permanência |
+| -------- | -------- | -------- | -------- | -------- | -------- |
+| NF01 | Interface Web |	Deve funcionar em uma plataforma web |	Interface | Obrigatório | Permanente |
+| NF02 | Interface Mobile |	Deve funcionar em uma plataforma mobile |	Interface | Desejável | Transitório |
+| NF03 | Tecnologias de Desenvolvimento |	Será desenvolvido usando o Play Framework na linguagem Java e HTML5 / JavaScript / CSS. |	Implementação | Obrigatório | Transitório |
+| NF04 | Restrição de Propostas |	Permitir que motoristas enviem propostas a um trabalho |	Especificação | Obrigatório | Transitório |
+| NF05 | Restrição de Trabalhos |	Permitir que os usuários logados vejam, criem ou apaguem trabalhos |	Especificação | Obrigatório | Transitório |
 
 ### 2.3 Tabela de Referência - Requisitos
 
