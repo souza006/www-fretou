@@ -30,7 +30,7 @@
 ### 2.2 Requisitos não funcionais
 
 | Cod. | Nome | Descrição | Categoria | Obrigatoriedade| Permanência |
-| -------- | -------- | -------- | -------- |
+| -------- | -------- | -------- | -------- | -------- | -------- |
 | NF01 | Interface Web |	Deve funcionar em uma plataforma web |	Interface | Obrigatório | Permanente |
 | NF02 | Interface Mobile |	Deve funcionar em uma plataforma mobile |	Interface | Desejável | Transitório |
 | NF03 | Tecnologias de Desenvolvimento |	Será desenvolvido usando o Play Framework na linguagem Java e HTML5 / JavaScript / CSS. |	Implementação | Obrigatório | Transitório |
