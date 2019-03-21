@@ -3,11 +3,20 @@
 ## 1. Introdução
 ### 1.1 Resumo
 
-    Texto resumindo o documento.
+    O sistema tem como propósito permitir a comunicação eficaz e com informações claras entre profissionais fretistas e clientes (tanto empresas, como também pessoas físicas) interessados em contratar seus serviços. 
+
 
 ### 1.2 Escopo
 
-    Texto explicando qual o escopo do projeto
+    Responsabilidades:
+        - Permitir que os usuários se cadastrem no sistema e possam logar na sua conta;
+        - Permitir a busca por anúncios seguindo filtro de busca;
+        - Permitir a postagem de anúncios e consulta de status do mesmo.
+
+    Não-Responsabilidades:
+        - “Qualidade” do transporte/serviço prestado; 
+        - Pagamentos fora da plataforma;
+        - Se a entrega/carga chegará ao destino correto no prazo estimado.
 
 ## 2. Requisitos
 
