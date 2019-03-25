@@ -3,8 +3,8 @@
 ## 1. Introdução
 ### 1.1 Resumo
 
-    O sistema tem como propósito permitir a comunicação eficaz e com informações claras entre profissionais fretistas e clientes (tanto empresas, como também pessoas físicas)
-    interessados em contratar seus serviços. 
+    O sistema tem como propósito permitir a comunicação eficaz e com informações claras entre profissionais fretistas e clientes 
+    (tanto empresas, como também pessoas físicas) interessados em contratar seus serviços. 
 
 
 ### 1.2 Escopo
