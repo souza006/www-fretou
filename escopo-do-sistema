@@ -1,0 +1,11 @@
+Responsabilidades:
+Permitir que os usuários se cadastrem no sistema e possam logar na sua conta;
+Permitir a busca por anúncios seguindo filtro de busca;
+Permitir a postagem de anúncios e consulta de status do mesmo.
+
+
+
+Não-Responsabilidades:
+“Qualidade” do transporte/serviço prestado; 
+Pagamentos fora da plataforma;
+Se a entrega/carga chegará ao destino correto no prazo estimado.
