@@ -16,7 +16,7 @@ abertas.
 ## Implementação da contribuições
 
 Depois que a _issue_ foi discutida e aprovada você deve realizar um clone do projeto
-(caso ainda não o tenha feito), de acordo com o descrito no arquivo (README.md)[README.md].
+(caso ainda não o tenha feito), de acordo com o descrito no arquivo [README.md](README.md).
 Configure corretamente o ambiente e realize testes locais.
 
 Para efetuar o desenvolvimento você deve criar um ramo (_branch_) de desenvolvoimento
@@ -25,12 +25,18 @@ principal (_branch master_) deve ser solicitado através de um _merge request_. 
 aceitação da requisição deve ser feita por um membro do projeto diferente de
 quem implementou as modificações.
 
+__IMPORTANTE__: Todos os _commits_ devem, obrigatoriamente, fazer referência a _issue_ que
+está relacionado. Use **\#NUM** para isso, onde NUM é o número da _issue_. 
+
 ### Exemplo:
 
 Se o você criou uma _issue_ chamada **Implementar Pagamento Parcelado**,
 cujo número é **21**, sua _branch_ deve se chamar `21-implementar-pagamento-parcelado`,
 dessa forma, através do nome da _branch_ é possível identificar rapidamente as
 referências necessárias no momento do _commit_.
+
+Todos os _commits_ realizados para a resolução dessa _issue_ devem ter no texto 
+explicando o _commit_ a expressão `#21`.
 
 ## Solicitar _merge_ da sua contribuição
 
