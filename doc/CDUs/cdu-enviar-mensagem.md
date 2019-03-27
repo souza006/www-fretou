@@ -4,7 +4,7 @@
 
 ## 1. Resumo
 
-Troca de mensagens entre usuário e motorista.
+Troca de mensagens entre usuário e motorista, no contexto de uma proposta ativa..
 
 ## 2. Atores
 
@@ -14,7 +14,7 @@ Cliente, Motorista
 
 ###  3.1 Deve estar logado
 
-O usuário deve estar logado no sistema para cadastrar um novo anúncio.
+O usuário deve estar logado no sistema para cadastrar uma nova mensagem.
 
 ###  3.2 Deve possuir uma proposta ativa entre as das partes
 
@@ -35,10 +35,15 @@ Não foram identificados.
 
 1. O ator seleciona a opção "enviar mensagem" na página de acompanhamento da proposta.
 1. O sistema exibe uma popup com o formulário de cadastro de mensagem.
-1. O ator informa no formulário os dados de sua mensagem (Texto da mensagem)
-1. O sistema persiste as informações
-1. O sistema exibe uma mensagem de sucesso e atualiza a página.
-1. CDU finalizado.
+1. O ator preenche o campo "mensagem" no formulário do popup.
+1. O ator clica no botão "Enviar mensagem"
+1. O sistema persiste as informações, exibe uma mensagem de sucesso e atualiza a página.
+
+
+### 6.2 Fluxo Alternativo
+
+1. A qualquer momento, o usuário pode clica no botão "Cancelar".
+1. O sistema fecha o popup de cadastro de mensagem e não persiste a mensagem.
 
 ## 7. Protótipos de Interface do Caso de Uso
 
