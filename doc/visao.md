@@ -33,7 +33,7 @@
 | F06 | Visualização de trabalhos |	O sistema deve permitir ver os detalhes de um trabalho específico antes de aceitá-lo. |	Evidente |
 | F07 | Envio de propostas |	 O sistema deve permitir o motorista de enviar uma proposta para um trabalho. |	Evidente |
 | F08 | Cancelamento de propostas |	O sistema deve permitir o motorista cancelar uma proposta já enviada. |	Evidente |
-| F09 | Notificar sobre proposta |	O sistema deve notificar por e-mail o usuário sobre uma nova proposta. |	Oculto |
+| F09 | Notificações sobre proposta |	O sistema deve notificar por e-mail o usuário sobre uma nova proposta. |	Oculto |
 | F10 | Ver proposta |	O sistema deve permitir o usuário ver detalhes de uma proposta enviada. |	Evidente |
 | F11 | Recusar proposta |	O sistema deve permitir o usuário recusar uma proposta enviada. |	Evidente |
 
