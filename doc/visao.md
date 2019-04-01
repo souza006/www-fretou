@@ -3,8 +3,8 @@
 ## 1. Introdução
 ### 1.1 Resumo
 
-    O sistema tem como propósito permitir a comunicação eficaz e com informações claras entre profissionais fretistas e clientes 
-    (tanto empresas, como também pessoas físicas) interessados em contratar seus serviços. 
+    O sistema tem como propósito permitir a comunicação eficaz e com informações claras entre profissionais fretistas e clientes
+    (tanto empresas, como também pessoas físicas) interessados em contratar seus serviços.
 
 
 ### 1.2 Escopo
@@ -15,7 +15,7 @@
         - Permitir a postagem de anúncios e consulta de status do mesmo.
 
     Não-Responsabilidades:
-        - “Qualidade” do transporte/serviço prestado; 
+        - “Qualidade” do transporte/serviço prestado;
         - Pagamentos fora da plataforma;
         - Se a entrega/carga chegará ao destino correto no prazo estimado.
 
@@ -25,7 +25,7 @@
 
 | Cod. | Nome | Descrição | Categoria |
 | -------- | -------- | -------- | -------- |
-| F01 | Cadastrar usuários |	O sistema deve permitir que os usuários se cadastrem no mesmo. |	Evidente |
+| F01 | Cadastro de usuários |	O sistema deve permitir que os usuários se cadastrem no mesmo. |	Evidente |
 | F02 | Fazer Login |	O sistema deve permitir que os usuários entrem no sistema usando suas credenciais. |	Evidente |
 | F03 | Recuperar senha |	O sistema deve permitir que os usuários recuperem suas senhas, se necessário. |	Evidente |
 | F04 | Listar trabalhos |	O sistema deve gerar uma lista de trabalhos disponíveis para o motorista. |	Evidente |
