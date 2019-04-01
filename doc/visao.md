@@ -35,7 +35,7 @@
 | F08 | Cancelamento de propostas |	O sistema deve permitir o motorista cancelar uma proposta já enviada. |	Evidente |
 | F09 | Notificação sobre propostas |	O sistema deve notificar por e-mail o usuário sobre uma nova proposta. |	Oculto |
 | F10 | Visualização de proposta |	O sistema deve permitir o usuário ver detalhes de uma proposta enviada. |	Evidente |
-| F11 | Recusar proposta |	O sistema deve permitir o usuário recusar uma proposta enviada. |	Evidente |
+| F11 | Negação de proposta |	O sistema deve permitir o usuário recusar uma proposta enviada. |	Evidente |
 
 ### 2.2 Requisitos não funcionais
 
