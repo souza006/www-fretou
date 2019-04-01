@@ -26,7 +26,7 @@
 | Cod. | Nome | Descrição | Categoria |
 | -------- | -------- | -------- | -------- |
 | F01 | Cadastro de usuários |	O sistema deve permitir que os usuários se cadastrem no mesmo. |	Evidente |
-| F02 | Fazer Login |	O sistema deve permitir que os usuários entrem no sistema usando suas credenciais. |	Evidente |
+| F02 | Login |	O sistema deve permitir que os usuários entrem no sistema usando suas credenciais. |	Evidente |
 | F03 | Recuperar senha |	O sistema deve permitir que os usuários recuperem suas senhas, se necessário. |	Evidente |
 | F04 | Listar trabalhos |	O sistema deve gerar uma lista de trabalhos disponíveis para o motorista. |	Evidente |
 | F05 | Cadastrar trabalho |	O sistema deve permitir o usuário cadastrar um novo trabalho. |	Evidente |
