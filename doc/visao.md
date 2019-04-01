@@ -29,7 +29,7 @@
 | F02 | Login |	O sistema deve permitir que os usuários entrem no sistema usando suas credenciais. |	Evidente |
 | F03 | Recuperação de senha |	O sistema deve permitir que os usuários recuperem suas senhas, se necessário. |	Evidente |
 | F04 | Listagem de  trabalhos |	O sistema deve gerar uma lista de trabalhos disponíveis para o motorista. |	Evidente |
-| F05 | Cadastrar trabalho |	O sistema deve permitir o usuário cadastrar um novo trabalho. |	Evidente |
+| F05 | Cadastro de trabalho |	O sistema deve permitir o usuário cadastrar um novo trabalho. |	Evidente |
 | F06 | Ver trabalho |	O sistema deve permitir ver os detalhes de um trabalho específico antes de aceitá-lo. |	Evidente |
 | F07 | Enviar proposta |	 O sistema deve permitir o motorista de enviar uma proposta para um trabalho. |	Evidente |
 | F08 | Cancelar proposta |	O sistema deve permitir o motorista cancelar uma proposta já enviada. |	Evidente |
