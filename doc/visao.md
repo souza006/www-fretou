@@ -3,8 +3,8 @@
 ## 1. Introdução
 ### 1.1 Resumo
 
-    O sistema tem como propósito permitir a comunicação eficaz e com informações claras entre profissionais fretistas e clientes 
-    (tanto empresas, como também pessoas físicas) interessados em contratar seus serviços. 
+    O sistema tem como propósito permitir a comunicação eficaz e com informações claras entre profissionais fretistas e clientes
+    (tanto empresas, como também pessoas físicas) interessados em contratar seus serviços.
 
 
 ### 1.2 Escopo
@@ -15,7 +15,7 @@
         - Permitir a postagem de anúncios e consulta de status do mesmo.
 
     Não-Responsabilidades:
-        - “Qualidade” do transporte/serviço prestado; 
+        - “Qualidade” do transporte/serviço prestado;
         - Pagamentos fora da plataforma;
         - Se a entrega/carga chegará ao destino correto no prazo estimado.
 
@@ -25,17 +25,17 @@
 
 | Cod. | Nome | Descrição | Categoria |
 | -------- | -------- | -------- | -------- |
-| F01 | Cadastrar usuários |	O sistema deve permitir que os usuários se cadastrem no mesmo. |	Evidente |
-| F02 | Fazer Login |	O sistema deve permitir que os usuários entrem no sistema usando suas credenciais. |	Evidente |
-| F03 | Recuperar senha |	O sistema deve permitir que os usuários recuperem suas senhas, se necessário. |	Evidente |
-| F04 | Listar trabalhos |	O sistema deve gerar uma lista de trabalhos disponíveis para o motorista. |	Evidente |
-| F05 | Cadastrar trabalho |	O sistema deve permitir o usuário cadastrar um novo trabalho. |	Evidente |
-| F06 | Ver trabalho |	O sistema deve permitir ver os detalhes de um trabalho específico antes de aceitá-lo. |	Evidente |
-| F07 | Enviar proposta |	 O sistema deve permitir o motorista de enviar uma proposta para um trabalho. |	Evidente |
-| F08 | Cancelar proposta |	O sistema deve permitir o motorista cancelar uma proposta já enviada. |	Evidente |
-| F09 | Notificar sobre proposta |	O sistema deve notificar por e-mail o usuário sobre uma nova proposta. |	Oculto |
-| F10 | Ver proposta |	O sistema deve permitir o usuário ver detalhes de uma proposta enviada. |	Evidente |
-| F11 | Recusar proposta |	O sistema deve permitir o usuário recusar uma proposta enviada. |	Evidente |
+| F01 | Cadastro de usuários |	O sistema deve permitir que os usuários se cadastrem no mesmo. |	Evidente |
+| F02 | Login |	O sistema deve permitir que os usuários entrem no sistema usando suas credenciais. |	Evidente |
+| F03 | Recuperação de senha |	O sistema deve permitir que os usuários recuperem suas senhas, se necessário. |	Evidente |
+| F04 | Listagem de  trabalhos |	O sistema deve gerar uma lista de trabalhos disponíveis para o motorista. |	Evidente |
+| F05 | Cadastro de trabalho |	O sistema deve permitir o usuário cadastrar um novo trabalho. |	Evidente |
+| F06 | Visualização de trabalhos |	O sistema deve permitir ver os detalhes de um trabalho específico antes de aceitá-lo. |	Evidente |
+| F07 | Envio de propostas |	 O sistema deve permitir o motorista de enviar uma proposta para um trabalho. |	Evidente |
+| F08 | Cancelamento de propostas |	O sistema deve permitir o motorista cancelar uma proposta já enviada. |	Evidente |
+| F09 | Notificação sobre propostas |	O sistema deve notificar por e-mail o usuário sobre uma nova proposta. |	Oculto |
+| F10 | Visualização de proposta |	O sistema deve permitir o usuário ver detalhes de uma proposta enviada. |	Evidente |
+| F11 | Negação de proposta |	O sistema deve permitir o usuário recusar uma proposta enviada. |	Evidente |
 
 ### 2.2 Requisitos não funcionais
 
