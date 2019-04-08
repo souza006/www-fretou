@@ -33,7 +33,11 @@
 .dropable i{
     position: absolute;
     right: 50%;
+    color:black;
     transform: translate(50%);
+}
+.dropable.reverse i{
+    color:white;
 }
 #navmenu-toggle{
     display:none;
@@ -67,6 +71,7 @@
         justify-content: flex-start;
         margin-left:100%;
         transition: 1s margin-left;
+        background-color:rgba(255, 255, 255, 0.95);
     }
     .navmenu.toggled{
         margin-left:0;
