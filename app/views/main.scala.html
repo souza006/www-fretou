@@ -4,7 +4,7 @@
  * two arguments, a `String` for the title of the page and an `Html`
  * object to insert into the body of the page.
  *@
-@(title: String)(content: Html)
+@(title: String,loggedIn: String)(content: Html)
 <html>
     <head>
         <title>@title</title>
@@ -15,7 +15,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
-        @components.navmenu()
+        
+        @components.navmenu(loggedIn)
+        
         @* And here's where we render the `Html` object containing
          * the page content. *@
         <div class="container" id="main-content">
