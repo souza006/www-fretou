@@ -1,0 +1,32 @@
+/* navmenu */
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono');
+.navmenu{
+    height: fit-content;
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    background-color: white;
+}
+.navmenu > a{
+    font-family: 'Roboto Mono', monospace;
+    text-decoration:none;
+    color:black;
+    border-bottom:2px solid white;
+    letter-spacing: 1px;
+}
+.navmenu > a:hover{
+    border-bottom:2px solid black;
+}
+.navmenu > .navmenu-item{
+    padding: 1.5em 2em 1.5em 2em;
+}
+.navmenu > .navmenu-item.reverse{
+    background-color:black;
+}
+.navmenu > .navmenu-item.reverse{
+    color:white;
+    border-bottom:2px solid black;
+}
+.navmenu > .logo{
+    margin-right: auto;
+}
