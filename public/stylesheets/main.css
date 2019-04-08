@@ -30,13 +30,46 @@
 .navmenu > .logo{
     margin-right: auto;
 }
-.dropdown-spinner{
+.dropable i{
     position: absolute;
-    width: 0;
-    height: 0;
-    border-left: 6px solid transparent;
-    border-right: 6px solid transparent;
-    border-top: 12px solid ghostwhite;
     right: 50%;
     transform: translate(50%);
+}
+#navmenu-toggle{
+    display:none;
+}
+/* fim navmenu */
+
+
+
+
+
+@media only screen and (max-width: 1024px) {
+    #main-content{
+        z-index: 9;
+        margin-top:2em;
+    }
+    #navmenu-toggle{
+        display:inline-block;
+        position: fixed;
+        top:1em;
+        right:1em;
+        z-index:99;
+        font-size:2em;
+    }
+    .navmenu{
+        position: fixed;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        top: 0;
+        justify-content: flex-start;
+        margin-left:100%;
+        transition: 1s margin-left;
+    }
+    .navmenu.toggled{
+        margin-left:0;
+        transition: 1s margin-left;
+    }
 }
