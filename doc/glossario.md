@@ -1,14 +1,14 @@
 # Glossário
 
-- *Fretista*: Profissional ou empresa especializada nos trâmites de transporte, seja ele internacional ou nacional.
+- *Fretista* : Profissional ou empresa especializada nos trâmites de transporte, seja ele internacional ou nacional.
  
-- *Frete*: A palavra frete é largamente usada para definir o ato de transportar bens de um local para outro distante,
+- *Frete* : A palavra frete é largamente usada para definir o ato de transportar bens de um local para outro distante,
 seja através dos meios rodoviários, lacustres, ferroviários ou aéreos. Algumas pessoas confundem frete com carreto mas são diferentes, 
 pois enquanto o frete é o transporte de bens de um município para outro ou de um estado ou país para outro,
 isto é ultrapassando os limites geográficos do local de origem, o carreto é o mesmo transporte de bens,
 independente do tamanho ou tipo do veículo transportador, porém restringindo-se à área urbana das cidades(mesmo município).
 
-- *Carga*: conjunto de todos os bens ou mercadorias transportados, com exceção de correio, bagagem e provisões.
+- *Carga* : conjunto de todos os bens ou mercadorias transportados, com exceção de correio, bagagem e provisões.
 
 - *Carga Frigorificada* : Carga frigorificada é a carga que requer processo de refrigeração ou congelamento para conservar as qualidades essenciais dos gêneros alimentícios
 como carnes, peixes, vegetais, flores, frutas, produtos farmacêuticos, etc.
