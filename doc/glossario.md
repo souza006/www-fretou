@@ -1,4 +1,4 @@
-### Glossário
+# Glossário
 
 - Fretista
 - Frete
