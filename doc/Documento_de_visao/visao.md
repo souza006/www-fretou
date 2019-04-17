@@ -3,38 +3,37 @@
 ## 1. Introdução
 ### 1.1 Resumo
 
-O sistema tem como propósito permitir a comunicação eficaz e com informações claras entre profissionais fretistas e clientes
+- O sistema tem como propósito permitir a comunicação eficaz e com informações claras entre profissionais fretistas e clientes
 (tanto empresas, como também pessoas físicas) interessados em contratar seus serviços.
 
 
 ### 1.2 Escopo
 
-Responsabilidades:
+*Responsabilidades:*
 
-Permitir que os usuários se cadastrem no sistema e possam logar na sua conta;<br>
-Permitir que usuários já cadastrados recuperem o acesso ao sistema, se porventura houver algum tipo de perda de dados na autenticação, através de uma confirmação de identidade;<br>
-Permitir a busca por anúncios seguindo filtro de busca;<br>
-Permitir a postagem de anúncios e consulta de status do mesmo;<br>
-Arbitragem de pagamentos dentro da plataforma;<br>
-Garantir a qualidade do transporte da carga, através do sistema de avaliação dos fretistas, medido em pontos de credibilidade;<br>
-Garantir que o usuário tenha acesso a negociação com a possibilidade de mais de um anunciante;<br>
-Garantir o acesso ao sistema por diversos usuários ao mesmo tempo, independentemente das tarefas que estejam realizando;<br>
-Garantir a postagem de múltiplos anúncios por parte de um usuário já cadastrado;<br>
-Fornecer uma linguagem clara e objetiva entre contratante e contratado, visando agilizar o processo de negociação;<br>
-O sistema deve garantir que, para transações feitas na plataforma, o valor a ser depositado na conta do fretista seja o mesmo valor combinado com o cliente durante a etapa de negociação;<br>
-Garantir que usuários se portem de forma adequada e de acordo com as políticas de uso da plataforma;<br>
-Notificar as partes envolvidas na transação após feito o registro do pagamento de uma negociação feita na plataforma;<br>
-(Se o depósito na conta não for registrado, o sistema notifica ao usuário que solicite uma outra forma de pagamento, ficando a critério dos usuários qual)<br>
-Garantir que fretistas possam informar sobre o estado do trasnporte da carga caso hajam imprevistos;<br>
+- Permitir que os usuários se cadastrem no sistema e possam logar na sua conta;
+- Permitir que usuários já cadastrados recuperem o acesso ao sistema, se porventura houver algum tipo de perda de dados na autenticação, através de uma confirmação de identidade;
+- Permitir a busca por anúncios seguindo filtro de busca;
+- Permitir a postagem de anúncios e consulta de status do mesmo;
+- Arbitragem de pagamentos dentro da plataforma;
+- Garantir a qualidade do transporte da carga, através do sistema de avaliação dos fretistas, medido em pontos de credibilidade;
+- Garantir que o usuário tenha acesso a negociação com a possibilidade de mais de um anunciante;
+- Garantir o acesso ao sistema por diversos usuários ao mesmo tempo, independentemente das tarefas que estejam realizando;
+- Garantir a postagem de múltiplos anúncios por parte de um usuário já cadastrado;
+- Fornecer uma linguagem clara e objetiva entre contratante e contratado, visando agilizar o processo de negociação;
+- O sistema deve garantir que, para transações feitas na plataforma, o valor a ser depositado na conta do fretista seja o mesmo valor combinado com o cliente durante a etapa de negociação;
+- Garantir que usuários se portem de forma adequada e de acordo com as políticas de uso da plataforma;
+- Notificar as partes envolvidas na transação após feito o registro do pagamento de uma negociação feita na plataforma;
+(Se o depósito na conta não for registrado, o sistema notifica ao usuário que solicite uma outra forma de pagamento, ficando a critério dos usuários qual)
+- Garantir que fretistas possam informar sobre o estado do trasnporte da carga caso hajam imprevistos;
 
-Não-Responsabilidades:
+*Não-Responsabilidades:*
 
-Pagamentos fora da plataforma;<br>
-Se a entrega/carga chegará ao destino correto, requerido pelo cliente, e no prazo estipulado pelo motorista;<br>
-Garantir a segurança tanto do motorista, quanto da carga transportada;<br>
-Imprevistos que possam ocorrer durante o transporte;<br>
-Atender demandas fora do escopo;<br>
-
+- Pagamentos fora da plataforma;
+- Se a entrega/carga chegará ao destino correto, requerido pelo cliente, e no prazo estipulado pelo motorista;
+- Garantir a segurança tanto do motorista, quanto da carga transportada;
+- Imprevistos que possam ocorrer durante o transporte;
+- Atender demandas fora do escopo;
 
 ## 2. Requisitos
 
