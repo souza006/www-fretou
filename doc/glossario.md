@@ -25,6 +25,9 @@ Basicamente, toda a lataria, motor e demais sistemas são montados sobre o chass
 
 - *Eixo* : é onde são colocados os pares de rodas de um caminhão. O eixo conecta as rodas dos dois lados do veículo.
 
-- *Granel* :
+- *Granel* : Produtos a granel são mercadorias, cargas e suprimentos armazenados ou transportados em grandes quantidades, no seu estado bruto, sem embalagens fracionadas.
+São produtos que não podem ser ensacados ou encaixotados,sendo transportados em contêineres e caminhões específicos para cada caso.
 
-- *Neogranel* :
+- *Neogranel* : Corresponde ao carregamento formado por conglomerados homogêneos de mercadorias, de carga geral, sem acondicionamento específico, cujo volume ou quantidade
+possibilita o transporte em lotes, em um único embarque
+
