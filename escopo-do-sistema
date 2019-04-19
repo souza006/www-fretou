@@ -10,7 +10,8 @@
 - Garantir o acesso ao sistema por diversos usuários ao mesmo tempo, independentemente das tarefas que estejam realizando;
 - Garantir a postagem de múltiplos anúncios por parte de um usuário já cadastrado;
 - Fornecer uma linguagem clara e objetiva entre contratante e contratado, visando agilizar o processo de negociação;
-- O sistema deve garantir que, para transações feitas na plataforma, o valor a ser depositado na conta do fretista seja o mesmo valor combinado com o cliente durante a etapa de negociação;
+- O sistema deve garantir que, para transações feitas na plataforma, o valor a ser depositado na conta do fretista seja o mesmo valor combinado com o cliente durante a
+etapa de negociação;
 - Garantir que usuários se portem de forma adequada e de acordo com as políticas de uso da plataforma;
 - Notificar as partes envolvidas na transação após feito o registro do pagamento de uma negociação feita na plataforma;
 (Se o depósito na conta não for registrado, o sistema notifica ao usuário que solicite uma outra forma de pagamento, ficando a critério dos usuários qual)
@@ -20,5 +21,5 @@
 
 - Tratar pagamentos;
 - Logística e acompanhamento de entrega;
-- Garantir a segurança tanto do motorista, quanto da carga transportada;
-- Imprevistos que possam ocorrer durante o transporte;
+- Garantir a segurança tanto do motorista, quanto da carga transportada através de rastreamento da carga baseada na posição do dispositivo que o motorista 
+utilizar para entrar em contato com o sistema
