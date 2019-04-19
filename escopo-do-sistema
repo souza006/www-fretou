@@ -16,10 +16,9 @@
 (Se o depósito na conta não for registrado, o sistema notifica ao usuário que solicite uma outra forma de pagamento, ficando a critério dos usuários qual)
 - Garantir que fretistas possam informar sobre o estado do trasnporte da carga caso hajam imprevistos;
 
-### Não-Responsabilidades:
+### Não Será Resonsabilidade do Sistema:
 
-- Pagamentos fora da plataforma;
-- Se a entrega/carga chegará ao destino correto, requerido pelo cliente, e no prazo estipulado pelo motorista;
+- tratar pagamentos;
+- Logística e acompanhamento de entrega;
 - Garantir a segurança tanto do motorista, quanto da carga transportada;
 - Imprevistos que possam ocorrer durante o transporte;
-- Atender demandas fora do escopo;
