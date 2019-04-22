@@ -12,6 +12,7 @@ public class PropostaController extends Controller {
     * @method: index
     * @param: none
     * @result: Mostra a view com todos os dados do anúncio.
+    * @http: GET
    */
 
     public Result index() {
@@ -22,6 +23,7 @@ public class PropostaController extends Controller {
     * @method: acompanhar
     * @param: int id
     * @result: Mostra a view com as informações de uma proposta para um anúncio.
+    * @http: GET
    */
 
     public Result acompanhar(int id) {
@@ -32,6 +34,7 @@ public class PropostaController extends Controller {
     * @method: verPropostas
     * @param: int id
     * @result: Mostra a view com todas as propostas de um anúncio.
+    * @http: GET
    */
 
     public Result verPropostas(int id) {
@@ -42,6 +45,7 @@ public class PropostaController extends Controller {
     * @method: realizar
     * @param: int id
     * @result: Função para pegar as informações do POST para realizar uma proposta
+    * @http: POST
    */
 
     public Result realizar(int id) {
@@ -52,6 +56,7 @@ public class PropostaController extends Controller {
     * @method: ver
     * @param: int anuncio_id, int proposta_id
     * @result: Mostra a view com as informações de uma proposta específica para um anúncio. 
+    * @http: GET
    */
 
     public Result ver(int anuncio_id, int proposta_id) {
@@ -62,6 +67,7 @@ public class PropostaController extends Controller {
     * @method: responderProposta
     * @param: int anuncio_id, int proposta_id
     * @result: Função para pegar as informações do POST para responder uma proposta.
+    * @http: POST
    */
 
     public Result responderProposta(int anuncio_id, int proposta_id) {
