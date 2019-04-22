@@ -1,0 +1,30 @@
+@(loggedIn: String)
+<i id="navmenu-toggle" class="fas fa-bars"></i>
+<div class="navmenu" id="main-navmenu">
+    <a href="#" class="navmenu-item logo">
+        (logo vai aqui)
+    </a>
+    @if(loggedIn=="yes"){
+        <a href="#" class="navmenu-item">
+            INICIO
+        </a>
+        <a href="#" class="navmenu-item dropable position-relative">
+            ANUNCIOS
+            <i class="fas fa-caret-down"></i>
+        </a>
+        <a href="#" class="navmenu-item">
+            USUÁRIOS
+        </a>
+        <a href="#" class="navmenu-item reverse dropable position-relative">
+            HERIKLE
+            <i class="fas fa-caret-down"></i>
+        </a>
+    }else{
+        <a href="#" class="navmenu-item">
+            CONTATO
+        </a>
+        <a href="/home" class="navmenu-item reverse">
+            ENTRAR
+        </a>
+    }
+</div>

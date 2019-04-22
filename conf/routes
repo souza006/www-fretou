@@ -3,7 +3,31 @@
 # ~~~~
 
 # An example controller showing a sample home page
-GET     /                           controllers.HomeController.index
+GET     /                           controllers.IndexController.index
+
+GET     /anuncios                       controllers.AnuncioController.index
+
+GET     /anuncios/create                       controllers.AnuncioController.create
+
+POST     /anuncios/create                       controllers.AnuncioController.store
+
+GET     /anuncios/edit/:id                       controllers.AnuncioController.edit(id: Integer)
+
+PATCH     /anuncios/edit/:id                       controllers.AnuncioController.update(id: Integer)
+
+GET     /anuncios/:slug                       controllers.AnuncioController.show(slug: String)
+
+GET     /anuncios/acompanhar/:id                       controllers.PropostaController.acompanhar(id: Integer)
+
+GET     /anuncios/:id/proposta                       controllers.PropostaController.verPropostas(id: Integer)
+
+POST     /anuncios/:id/proposta                       controllers.AnuncioController.realizar(id: Integer)
+
+GET     /anuncios/:anuncio_id/proposta/:proposta_id                       controllers.PropostaController.ver(anuncio_id: Integer, proposta_id: Integer)
+
+POST     /anuncios/:anuncio_id/proposta/:proposta_id                       controllers.PropostaController.responderProposta(anuncio_id: Integer, proposta_id: Integer)
+
+GET     /usuario/:usuario_id/anuncio/:anuncio_id/avaliar                       controllers.UsuarioController.avaliar(usuario_id: Integer, anuncio_id: Integer)
 
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)

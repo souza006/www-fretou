@@ -1,0 +1,80 @@
+/* navmenu */
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono');
+.navmenu{
+    height: fit-content;
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    background-color: white;
+}
+.navmenu > a{
+    font-family: 'Roboto Mono', monospace;
+    text-decoration:none;
+    color:black;
+    border-bottom:2px solid white;
+    letter-spacing: 1px;
+}
+.navmenu > a:hover{
+    border-bottom:2px solid black;
+}
+.navmenu > .navmenu-item{
+    padding: 1.5em 2em 1.5em 2em;
+}
+.navmenu > .navmenu-item.reverse{
+    background-color:black;
+}
+.navmenu > .navmenu-item.reverse{
+    color:white;
+    border-bottom:2px solid black;
+}
+.navmenu > .logo{
+    margin-right: auto;
+}
+.dropable i{
+    position: absolute;
+    right: 50%;
+    color:black;
+    transform: translate(50%);
+}
+.dropable.reverse i{
+    color:white;
+}
+#navmenu-toggle{
+    display:none;
+}
+/* fim navmenu */
+
+
+
+
+
+@media only screen and (max-width: 1024px) {
+    #main-content{
+        z-index: 9;
+        margin-top:2em;
+    }
+    #navmenu-toggle{
+        display:inline-block;
+        position: fixed;
+        top:1em;
+        right:1em;
+        z-index:99;
+        font-size:2em;
+    }
+    .navmenu{
+        position: fixed;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        top: 0;
+        justify-content: flex-start;
+        margin-left:100%;
+        transition: 1s margin-left;
+        background-color:rgba(255, 255, 255, 0.95);
+    }
+    .navmenu.toggled{
+        margin-left:0;
+        transition: 1s margin-left;
+    }
+}
