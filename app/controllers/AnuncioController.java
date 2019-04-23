@@ -74,4 +74,14 @@ public class AnuncioController extends Controller {
         return ok("Handling HTTP PATCH to update an anuncio.");
     }
 
+    /*
+     * @method: realizar
+     * @param: int id
+     * @result: Função para enviar a requisição e realizar uma negociação.
+     * @http: POST
+     */
+
+    public Result realizar(int id) {
+        return ok("Handling HTTP POST to realizar proposta a um anuncio");
+    }
 }

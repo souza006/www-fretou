@@ -19,7 +19,7 @@ public class UsuarioController extends Controller {
     * @http: GET
    */
 
-    public Result index(int usuario_id, int anuncio_id) {
+    public Result avaliacao(int usuario_id, int anuncio_id) {
         return ok("view de avaliar um usuario e algumas informações do anuncio.");
     }
 
@@ -30,7 +30,7 @@ public class UsuarioController extends Controller {
     * @http: POST
    */
 
-    public Result avaliacao(int usuario_id, int anuncio_id) {
+    public Result avaliar(int usuario_id, int anuncio_id) {
         return ok("Handling HTTP POST to update avaliacao table.");
     }
 

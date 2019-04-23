@@ -71,6 +71,6 @@ public class PropostaController extends Controller {
    */
 
     public Result responderProposta(int anuncio_id, int proposta_id) {
-        return ok("Handling HTTP POST to show the view of a proposta from an anuncio.");
+        return ok("Handling HTTP POST to update the information about a proposta.");
     }
 }
