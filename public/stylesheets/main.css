@@ -1,43 +1,102 @@
 /* navmenu */
 @import url('https://fonts.googleapis.com/css?family=Roboto+Mono');
-.navmenu{
-    height: fit-content;
-    display: flex;
-    width: 100%;
-    justify-content: flex-end;
-    background-color: white;
+.navmenu {
+  height: fit-content;
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+  background-color: white;
+  font-family: "Roboto Mono", monospace;
+  z-index: 99;
 }
-.navmenu > a{
-    font-family: 'Roboto Mono', monospace;
-    text-decoration:none;
-    color:black;
-    border-bottom:2px solid white;
-    letter-spacing: 1px;
+.navmenu a {
+  text-decoration: none;
 }
-.navmenu > a:hover{
-    border-bottom:2px solid black;
+.navmenu button {
+  border: none;
+  cursor: pointer;
+  outline: none;
 }
-.navmenu > .navmenu-item{
-    padding: 1.5em 2em 1.5em 2em;
+.navmenu .navmenu-item {
+  padding: 1.5em 2em 1.5em 2em;
+  font-size: 1em;
+  position: relative;
+  color: black;
+  letter-spacing: 1px;
+  background-color: white;
+  cursor: pointer;
 }
-.navmenu > .navmenu-item.reverse{
-    background-color:black;
+.navmenu .navmenu-item:hover {
+  box-shadow: inset 0 -2px 0 black;
 }
-.navmenu > .navmenu-item.reverse{
-    color:white;
-    border-bottom:2px solid black;
+.navmenu .navmenu-item.reverse {
+  background-color: black;
+  color: white;
 }
-.navmenu > .logo{
-    margin-right: auto;
+.navmenu .logo {
+  margin-right: auto;
 }
-.dropable i{
-    position: absolute;
-    right: 50%;
-    color:black;
-    transform: translate(50%);
+
+.dropable i {
+  position: absolute;
+  right: 50%;
+  top: 60%;
+  color: black;
+  transform: translate(50%);
 }
-.dropable.reverse i{
-    color:white;
+
+.dropable.reverse i {
+  color: white;
+}
+
+.dropable-div {
+  position: relative;
+  background-color: white;
+  color: black;
+}
+.dropable-div button {
+  height: 100%;
+}
+.dropable-div .navmenu-dropdow-menu {
+  position: absolute;
+  width: fit-content;
+  right: 0;
+  bottom: 0;
+  transform: translate(0, 100%);
+  border: solid 1px gray;
+  border-top: none;
+  background-color: inherit;
+  z-index: 99;
+  color: inherit;
+  display:none;
+}
+.dropable-div .navmenu-dropdow-menu.toggled {
+    display:inline-block;
+}
+.dropable-div .navmenu-dropdow-menu .dropdown-item {
+  color: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1em 2em 1em 2em;
+  border-top: solid 1px gray;
+  cursor: pointer;
+}
+.dropable-div .navmenu-dropdow-menu .dropdown-item i {
+  margin-left: 0.5em;
+}
+.dropable-div .navmenu-dropdow-menu .dropdown-item:hover {
+  background-color: rgba(0, 0, 0, 0.15);
+}
+.dropable-div .navmenu-dropdow-menu.true {
+  display: block;
+}
+.dropable-div.reverse {
+  background-color: black;
+  color: white;
+}
+.dropable-div.reverse .dropdown-item:hover {
+  background-color: rgba(255, 255, 255, 0.15);
 }
 #navmenu-toggle{
     display:none;
@@ -45,10 +104,8 @@
 /* fim navmenu */
 
 
-
-
-
 @media only screen and (max-width: 1024px) {
+    /* navmenu */
     #main-content{
         z-index: 9;
         margin-top:2em;
@@ -58,7 +115,7 @@
         position: fixed;
         top:1em;
         right:1em;
-        z-index:99;
+        z-index:999;
         font-size:2em;
     }
     .navmenu{
@@ -77,4 +134,18 @@
         margin-left:0;
         transition: 1s margin-left;
     }
+    .dropable-div{
+        height:fit-content;
+        text-align:center;
+    }
+    .navmenu .navmenu-item{
+        text-align:center;
+    }
+    .dropable-div button {
+        width:100%;
+    }
+    .dropable-div .navmenu-dropdow-menu{
+        width:100%;
+    }
+    /* fim navmenu */
 }
