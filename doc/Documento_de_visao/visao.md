@@ -26,7 +26,7 @@ etapa de negociação;
 - Garantir que usuários se portem de forma adequada e de acordo com as políticas de uso da plataforma;
 - Notificar as partes envolvidas na transação após feito o registro do pagamento de uma negociação feita na plataforma;
 (Se o depósito na conta não for registrado, o sistema notifica ao usuário que solicite uma outra forma de pagamento, ficando a critério dos usuários qual)
-- Garantir que fretistas possam informar sobre o estado do trasnporte da carga caso hajam imprevistos;
+- Garantir que fretistas possam informar sobre o estado do transporte da carga caso hajam imprevistos;
 - Garantir que a carga chegue ao destino correto, através de um sistema de rastreamento da carga;
 
 ### Não serão responsabilidades do sistema:
