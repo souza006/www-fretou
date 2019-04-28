@@ -71,7 +71,7 @@ etapa de negociação;
 
 ### 2.4 Diagrama Geral de Casos de Uso
 
-    Diagrama de casos de uso
+![Diagrama de Casos de Uso](https://gitlab.devops.ifrn.edu.br/tads.cnat/pdsweb/2019-1/www-fretou/wikis/uploads/ae3dac0ebc06582c7e9346801c92c2a9/print2.png)
 
 ### 2.5. Casos de Uso
 
