@@ -12,4 +12,8 @@ public class HomeController extends Controller {
         return ok(views.html.pages.home.render());
     }
 
+    public Result anuncio(int id){
+        return ok(views.html.pages.anuncio.render(id));
+    }
+
 }
