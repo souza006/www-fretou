@@ -2,6 +2,9 @@ package controllers;
 
 import play.mvc.*;
 import javax.inject.Inject;
+import java.util.*;
+import models.Proposta;
+
 /**
  * This controller contains an action to handle HTTP requests
  * to the application's home page.
@@ -16,7 +19,16 @@ public class PropostaController extends Controller {
    */
 
     public Result index() {
-        return ok(views.html.pages.propostas.render());
+        /* Proposta p = new Proposta(1,"aguardando", 1); */
+        HashMap<Integer, Proposta> p = new HashMap<Integer, Proposta>();
+        p.put(1, new Proposta(1,"aguardando", 1) );
+        p.put(2, new Proposta(3,"aguardando", 2531) );
+        p.put(3, new Proposta(46,"aguardando", 2031) );
+        p.put(4, new Proposta(16,"aguardando", 221) );
+        p.put(5, new Proposta(543,"aguardando", 2135) );
+        p.put(6, new Proposta(21,"aguardando", 3234) );
+
+        return ok(views.html.pages.propostas.render(p));
     }
 
    /*
@@ -70,7 +82,11 @@ public class PropostaController extends Controller {
     * @http: POST
    */
 
-    public Result responderProposta(int proposta_id) {
-        return ok("Handling HTTP POST to update the information about a proposta.");
+    public Result responderProposta(int proposta_id, String status) {
+      HashMap<Integer, Proposta> p;
+      Proposta atual = p.get(proposta_id);
+      atual.setStatus = status;
+      p.set(proposta_id)
+        return ok();
     }
 }

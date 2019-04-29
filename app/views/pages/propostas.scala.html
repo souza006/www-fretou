@@ -1,3 +1,5 @@
+@(propostas: HashMap[Integer, Proposta])
+
 @main("Titulo da Proposta", "yes"){
 
   <div class="row">
@@ -19,11 +21,12 @@
         <div class="col-12">
           <table class="table table-hover">
             <tbody>
-              @for(i <- 1 to 10){
+              @for(i <- 1 to propostas.size()){
                 <tr>
-                  <th scope="row">#123</th>
-                  <td><a href="/usuario/propostas/ver/@i">Titulo do anuncio</a</td>
-                    <td>por Usuário</td>
+                  <th scope="row">@propostas.get(i).getId()</th>
+                  <td><a href="/usuario/propostas/ver/@propostas.get(i).getId()">Titulo do anuncio</a</td>
+                    <td>por Usuário (@propostas.get(i).getUsuario_id())</td>
+                    <td>@propostas.get(i).getStatus()</td>
                     <td>feita em 00/00/2019 às 12:32</td>
                   </tr>
                 }
