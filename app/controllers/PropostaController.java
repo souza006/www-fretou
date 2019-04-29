@@ -16,7 +16,7 @@ public class PropostaController extends Controller {
    */
 
     public Result index() {
-        return ok(views.html.pages.home.render());
+        return ok(views.html.pages.propostas.render());
     }
 
    /*
@@ -55,12 +55,12 @@ public class PropostaController extends Controller {
    /*
     * @method: ver
     * @param: int anuncio_id, int proposta_id
-    * @result: Mostra a view com as informações de uma proposta específica para um anúncio. 
+    * @result: Mostra a view com as informações de uma proposta específica para um anúncio.
     * @http: GET
    */
 
-    public Result ver(int anuncio_id, int proposta_id) {
-        return ok("Handling HTTP GET to show the view of a proposta from an anuncio.");
+    public Result ver(int proposta_id) {
+        return ok(views.html.pages.proposta.render());
     }
 
    /*
@@ -70,7 +70,7 @@ public class PropostaController extends Controller {
     * @http: POST
    */
 
-    public Result responderProposta(int anuncio_id, int proposta_id) {
+    public Result responderProposta(int proposta_id) {
         return ok("Handling HTTP POST to update the information about a proposta.");
     }
 }

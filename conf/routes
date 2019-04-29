@@ -25,9 +25,11 @@ GET     /anuncios/:id/proposta                       controllers.PropostaControl
 
 POST     /anuncios/:id/proposta                       controllers.AnuncioController.realizar(id: Integer)
 
-GET     /anuncios/:anuncio_id/proposta/:proposta_id                       controllers.PropostaController.ver(anuncio_id: Integer, proposta_id: Integer)
+GET   /usuario/propostas                   controllers.PropostaController.index
 
-POST     /anuncios/:anuncio_id/proposta/:proposta_id                       controllers.PropostaController.responderProposta(anuncio_id: Integer, proposta_id: Integer)
+GET     /usuario/propostas/ver/:proposta_id                       controllers.PropostaController.ver(proposta_id: Integer)
+
+POST     /usuario/propostas/responder/proposta_id                       controllers.PropostaController.responderProposta(proposta_id: Integer)
 
 GET     /usuario/:usuario_id/anuncio/:anuncio_id/avaliar                       controllers.UsuarioController.avaliacao(usuario_id: Integer, anuncio_id: Integer)
 
