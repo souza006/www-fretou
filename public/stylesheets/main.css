@@ -121,6 +121,14 @@
 #anuncio-completo {}
 
 
+/************************
+* Pagina de configuracoes
+*************************/
+
+
+.menu-item {display:list-item;}
+
+
 @media only screen and (max-width: 1024px) {
     /* navmenu */
     #main-content{
