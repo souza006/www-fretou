@@ -67,7 +67,8 @@ public class PropostaController extends Controller {
    */
 
     public Result ver(int proposta_id) {
-        return ok(views.html.pages.proposta.render());
+        Proposta p = Proposta.findById(proposta_id);
+        return ok(views.html.pages.proposta.render(p));
     }
 
    /*
@@ -80,6 +81,6 @@ public class PropostaController extends Controller {
     public Result responderProposta(int proposta_id, String status) {
       Proposta atual = Proposta.findById(proposta_id);
       atual.setStatus(status);
-        return ok();
+        return redirect(routes.PropostaController.index());
     }
 }
