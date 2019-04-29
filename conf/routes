@@ -6,7 +6,7 @@
 GET     /                           controllers.IndexController.index
 
 GET     /inicio                       controllers.HomeController.index
-GET     /anuncio/:id                controllers.HomeController.anuncio(id: Int)
+
 GET     /anuncios                       controllers.AnuncioController.index
 
 GET     /anuncios/create                       controllers.AnuncioController.create
