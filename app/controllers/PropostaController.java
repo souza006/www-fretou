@@ -80,7 +80,20 @@ public class PropostaController extends Controller {
 
     public Result responderProposta(int proposta_id, String status) {
       Proposta atual = Proposta.findById(proposta_id);
-      atual.setStatus(status);
+        return redirect(routes.PropostaController.index());
+    }
+
+    public Result aceitarProposta(int proposta_id) {
+        Proposta atual = Proposta.findById(proposta_id);
+        assert atual != null;
+        atual.aceitar();
+        return redirect(routes.PropostaController.index());
+    }
+
+    public Result recusarProposta(int proposta_id) {
+        Proposta atual = Proposta.findById(proposta_id);
+        assert atual != null;
+        atual.recusar();
         return redirect(routes.PropostaController.index());
     }
 }

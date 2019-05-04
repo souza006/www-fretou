@@ -27,10 +27,13 @@ POST     /anuncios/:id/proposta                       controllers.AnuncioControl
 
 GET   /usuario/propostas                   controllers.PropostaController.index
 
-GET     /usuario/propostas/ver/:proposta_id                       controllers.PropostaController.ver(proposta_id: Integer)
+GET     /usuario/proposta/:proposta_id                       controllers.PropostaController.ver(proposta_id: Integer)
 
 + nocsrf
-POST     /usuario/propostas/responder/:proposta_id                      controllers.PropostaController.responderProposta(proposta_id: Integer, status:String)
+POST     /usuario/propostas/responder/:proposta_id/aceitar                      controllers.PropostaController.aceitarProposta(proposta_id: Integer)
+
++ nocsrf
+POST     /usuario/propostas/responder/:proposta_id/recusar                     controllers.PropostaController.recusarProposta(proposta_id: Integer)
 
 GET     /usuario/:usuario_id/anuncio/:anuncio_id/avaliar                       controllers.UsuarioController.avaliacao(usuario_id: Integer, anuncio_id: Integer)
 
