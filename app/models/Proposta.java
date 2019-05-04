@@ -4,6 +4,10 @@ import java.util.*;
 
 public class Proposta {
 
+  public static String STATUS_ACEITO = "aceito";
+  public static String STATUS_AGUARDANDO = "aguardando";
+  public static String STATUS_RECUSADO = "recusado";
+
   public int id;
   public String status;
   public int usuario_id;
@@ -22,8 +26,14 @@ public class Proposta {
     return this.id;
   }
 
-  public void setStatus(String status){
-    this.status = status;
+  public void aceitar()
+  {
+    this.status = STATUS_ACEITO;
+  }
+
+  public void recusar()
+  {
+    this.status = STATUS_RECUSADO;
   }
 
   public String getStatus(){
@@ -42,12 +52,12 @@ public class Proposta {
 
   static {
     propostas = new HashSet<>();
-    propostas.add(new Proposta(1,"aguardando", 1) );
-    propostas.add(new Proposta(3,"aguardando", 2531) );
-    propostas.add(new Proposta(46,"aguardando", 2031) );
-    propostas.add(new Proposta(16,"aguardando", 221) );
-    propostas.add(new Proposta(543,"aguardando", 2135) );
-    propostas.add(new Proposta(21,"aguardando", 3234) );
+    propostas.add(new Proposta(1, STATUS_AGUARDANDO, 1) );
+    propostas.add(new Proposta(3,STATUS_AGUARDANDO, 2531) );
+    propostas.add(new Proposta(46,STATUS_AGUARDANDO, 2031) );
+    propostas.add(new Proposta(16,STATUS_AGUARDANDO, 221) );
+    propostas.add(new Proposta(543,STATUS_AGUARDANDO, 2135) );
+    propostas.add(new Proposta(21,STATUS_AGUARDANDO, 3234) );
   }
 
   public static Set<Proposta> all() {
