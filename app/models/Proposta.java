@@ -4,9 +4,9 @@ import java.util.*;
 
 public class Proposta {
 
-  public static String STATUS_ACEITO = "aceito";
+  public static String STATUS_ACEITA = "aceita";
   public static String STATUS_AGUARDANDO = "aguardando";
-  public static String STATUS_RECUSADO = "recusado";
+  public static String STATUS_RECUSADA = "recusada";
 
   public int id;
   public String status;
@@ -28,12 +28,12 @@ public class Proposta {
 
   public void aceitar()
   {
-    this.status = STATUS_ACEITO;
+    this.status = STATUS_ACEITA;
   }
 
   public void recusar()
   {
-    this.status = STATUS_RECUSADO;
+    this.status = STATUS_RECUSADA;
   }
 
   public String getStatus(){
@@ -64,7 +64,17 @@ public class Proposta {
     return propostas;
   }
 
+  public static Set<Proposta> filterByStatus(String status) {
+    Set<Proposta> filtradas = new HashSet<>();
+    for (Proposta proposta : propostas)
+      if (status.equals(proposta.status))
+        filtradas.add(proposta);
+
+    return filtradas;
+  }
+
   public static Proposta findById(int id) {
+
     for (Proposta proposta : propostas)
       if(proposta.id == id)
         return proposta;

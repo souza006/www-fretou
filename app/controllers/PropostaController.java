@@ -18,10 +18,23 @@ public class PropostaController extends Controller {
     * @http: GET
    */
 
-    public Result index() {
-        /* Proposta p = new Proposta(1,"aguardando", 1); */
+    public Result indexAguardando() {
 
-        Set<Proposta> propostas = Proposta.all();
+        Set<Proposta> propostas = Proposta.filterByStatus(Proposta.STATUS_AGUARDANDO);
+
+        return ok(views.html.pages.propostas.render(propostas));
+    }
+
+    public Result indexAceitas() {
+
+        Set<Proposta> propostas = Proposta.filterByStatus(Proposta.STATUS_ACEITA);
+
+        return ok(views.html.pages.propostas.render(propostas));
+    }
+
+    public Result indexRecusadas() {
+
+        Set<Proposta> propostas = Proposta.filterByStatus(Proposta.STATUS_RECUSADA);
 
         return ok(views.html.pages.propostas.render(propostas));
     }
@@ -78,22 +91,17 @@ public class PropostaController extends Controller {
     * @http: POST
    */
 
-    public Result responderProposta(int proposta_id, String status) {
-      Proposta atual = Proposta.findById(proposta_id);
-        return redirect(routes.PropostaController.index());
-    }
-
     public Result aceitarProposta(int proposta_id) {
         Proposta atual = Proposta.findById(proposta_id);
         assert atual != null;
         atual.aceitar();
-        return redirect(routes.PropostaController.index());
+        return redirect(routes.PropostaController.indexAguardando());
     }
 
     public Result recusarProposta(int proposta_id) {
         Proposta atual = Proposta.findById(proposta_id);
         assert atual != null;
         atual.recusar();
-        return redirect(routes.PropostaController.index());
+        return redirect(routes.PropostaController.indexAguardando());
     }
 }
