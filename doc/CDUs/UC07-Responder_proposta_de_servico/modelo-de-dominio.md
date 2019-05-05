@@ -1,1 +1,0 @@
-![Modelo de Domínio UC07 - Responder proposta de serviço](https://gitlab.devops.ifrn.edu.br/tads.cnat/pdsweb/2019-1/www-fretou/wikis/uploads/b06e87a1fd23c075dcb062212bf63399/Fretou_-_CDU07_-_Diagrama_de_Dom%C3%ADnio.png)
