@@ -27,7 +27,7 @@ public class AnuncioController extends Controller {
    */
 
     public Result show(String slug) {
-        return ok("Handling HTTP GET to update an anuncio.");
+        return ok(views.html.pages.anuncio.render(slug));
     }
 
    /*

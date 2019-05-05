@@ -11,5 +11,4 @@ public class HomeController extends Controller {
     public Result index() {
         return ok(views.html.pages.home.render());
     }
-
 }
