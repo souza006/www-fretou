@@ -6,9 +6,13 @@ public class Anuncio {
 
     public int id;
     public int usuario_id;
+    public String titulo;
+    public String descricao;
 
-    public Anuncio(int id, int usuario_id){
+    public Anuncio(int id, String titulo, String descricao,int usuario_id){
         this.id = id;
+        this.titulo = titulo;
+        this.descricao = descricao;
         this.usuario_id = usuario_id;
         this.propostas = new HashSet<>();
     }
@@ -29,18 +33,26 @@ public class Anuncio {
         return this.usuario_id;
     }
 
+    public void setTitulo(String titulo) {this.titulo = titulo;}
+
+    public String getTitulo() { return this.titulo; }
+
+    public void setDescricao(String descricao) {this.descricao = descricao;}
+
+    public String getDescricao() { return this.descricao; }
+
     private static Set<Anuncio> anuncios;
     private Set<Proposta> propostas;
 
     static {
 
         anuncios = new HashSet<>();
-        anuncios.add(new Anuncio(1,1));
-        anuncios.add(new Anuncio(3, 3) );
-        anuncios.add(new Anuncio(46, 46) );
-        anuncios.add(new Anuncio(16, 16) );
-        anuncios.add(new Anuncio(543, 543) );
-        anuncios.add(new Anuncio(21, 21) );
+        anuncios.add(new Anuncio(1,"Anúncio - " + 1, "Descrição incrível - " + 1, 1));
+        anuncios.add(new Anuncio(3,"Anúncio - " + 3, "Descrição incrível - " + 3, 3) );
+        anuncios.add(new Anuncio(46,"Anúncio - " + 46, "Descrição incrível - " + 46, 46) );
+        anuncios.add(new Anuncio(16,"Anúncio - " + 16, "Descrição incrível - " + 16, 16) );
+        anuncios.add(new Anuncio(543,"Anúncio - " + 543, "Descrição incrível - " + 543, 543) );
+        anuncios.add(new Anuncio(21,"Anúncio - " + 21, "Descrição incrível - " + 21, 21) );
         for (Anuncio anuncio: anuncios)
             anuncio.generatePropostas();
     }
