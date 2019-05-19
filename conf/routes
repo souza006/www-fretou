@@ -17,7 +17,7 @@ GET     /anuncios/edit/:id                       controllers.AnuncioController.e
 
 PATCH     /anuncios/edit/:id                       controllers.AnuncioController.update(id: Integer)
 
-GET     /anuncios/:slug                       controllers.AnuncioController.show(slug: String)
+GET     /anuncio/:id                       controllers.AnuncioController.show(id: Integer)
 
 GET     /anuncios/acompanhar/:id                       controllers.PropostaController.acompanhar(id: Integer)
 

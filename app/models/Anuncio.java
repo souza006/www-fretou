@@ -25,11 +25,11 @@ public class Anuncio {
         return this.id;
     }
 
-    public void setUsuario_id(int usuario_id){
+    public void setUsuarioId(int usuario_id){
         this.usuario_id = usuario_id;
     }
 
-    public int getUsuario_id(){
+    public int getUsuarioId(){
         return this.usuario_id;
     }
 

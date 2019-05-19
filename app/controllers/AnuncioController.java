@@ -32,8 +32,8 @@ public class AnuncioController extends Controller {
     * @http: GET
    */
 
-    public Result show(String slug) {
-        return ok(views.html.pages.anuncio.render(slug));
+    public Result show(int id) {
+        return ok(views.html.pages.anuncio.render(Anuncio.findById(id)));
     }
 
    /*
