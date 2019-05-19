@@ -11,11 +11,13 @@ public class Proposta {
   public int id;
   public String status;
   public int usuario_id;
+  public int anuncio_id;
 
-  public Proposta(int id, String status, int usuario_id){
+  public Proposta(int id, String status, int usuario_id, int anuncio_id){
     this.id = id;
     this.status = status;
     this.usuario_id = usuario_id;
+    this.anuncio_id = anuncio_id;
   }
 
   public void setId(int id){
@@ -52,12 +54,12 @@ public class Proposta {
 
   static {
     propostas = new HashSet<>();
-    propostas.add(new Proposta(1, STATUS_AGUARDANDO, 1) );
-    propostas.add(new Proposta(3,STATUS_AGUARDANDO, 2531) );
-    propostas.add(new Proposta(46,STATUS_AGUARDANDO, 2031) );
-    propostas.add(new Proposta(16,STATUS_AGUARDANDO, 221) );
-    propostas.add(new Proposta(543,STATUS_AGUARDANDO, 2135) );
-    propostas.add(new Proposta(21,STATUS_AGUARDANDO, 3234) );
+    propostas.add(new Proposta(1, STATUS_AGUARDANDO, 1, 1) );
+    propostas.add(new Proposta(3,STATUS_AGUARDANDO, 2531, 1) );
+    propostas.add(new Proposta(46,STATUS_AGUARDANDO, 2031, 1) );
+    propostas.add(new Proposta(16,STATUS_AGUARDANDO, 221, 1) );
+    propostas.add(new Proposta(543,STATUS_AGUARDANDO, 2135, 1) );
+    propostas.add(new Proposta(21,STATUS_AGUARDANDO, 3234, 1) );
   }
 
   public static Set<Proposta> all() {
