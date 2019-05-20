@@ -1,0 +1,37 @@
+@(anuncios: Set[Anuncio])
+
+@main("Anúncio", "yes"){
+
+<div class="row">
+
+<!--    <div id="sidebar" class="col-3 border-right">-->
+<!--        <h3>Conta</h3>-->
+<!--        <a href="#" class="menu-item">Informações da conta</a>-->
+<!--        <a href="#" class="menu-item">Informações pessoais</a>-->
+<!--        <a href="#" class="menu-item">Informações de segurança</a>-->
+<!--        <h3>Anúncios</h3>-->
+<!--        <a href="#" class="menu-item">Meus anúncios</a>-->
+<!--        <a href="/usuario/propostas" class="menu-item">Propostas</a>-->
+<!--    </div>-->
+    <div class="col-12">
+        <h2>Anúncios</h2>
+        <div class="row">
+            @for(anuncio <- anuncios){
+            <div class="col-lg-3 col-md-4 col-sm-6 col-12">
+                <div id="anuncio-home">
+                    <div id="anuncio-detalhes">
+                        <a href="/anuncio/@anuncio.getId()">
+                            <img class="anuncio-miniatura" src="https://placehold.it/250x280">
+                        </a>
+                        <a class="anuncio-propostas" href="/anuncio/@anuncio.getId()">@anuncio.getId()</a>
+                    </div>
+                    <a class="anuncio-titulo" href="/anuncio/@anuncio.getId()">@anuncio.getTitulo()</a>
+                </div>
+            </div>
+            }
+        </div>
+    </div>
+
+</div>
+
+}
