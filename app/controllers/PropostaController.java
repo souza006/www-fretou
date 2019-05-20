@@ -72,7 +72,7 @@ public class PropostaController extends Controller {
     public Result realizar(int id) {
         Anuncio anuncio = Anuncio.findById(id);
         assert anuncio != null;
-        Proposta p = new Proposta(id + 2, Proposta.STATUS_AGUARDANDO, anuncio.usuario_id, anuncio.id);
+        Proposta p = new Proposta(id + 2, Proposta.STATUS_AGUARDANDO, "Lorem Ipsum", anuncio.usuario_id, anuncio.id);
         anuncio.addProposta(p);
         return redirect(routes.AnuncioController.index());
     }
