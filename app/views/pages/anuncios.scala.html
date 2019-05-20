@@ -6,9 +6,9 @@
     <div class="container py-4 mt-2">
         <h3 class="tittle-w3ls text-center mb-3">Anúncios</h3>
         <p class="tit text-center mx-auto">Anúncios do sistema</p>
-        <div class="card-deck pt-4 mt-md-4">
+        <div class="row mt-2">
             @for((anuncio, index) <- anuncios.zipWithIndex){
-            <div class="card">
+            <div class="card col-4 mt-2 border-0">
                 <img src='@routes.Assets.versioned("images/g1.jpg")' class="img-fluid" alt="Anúncio - @anuncio.getTitulo()">
                 <div class="card-body w3ls-card">
                     <h5 class="card-title">@anuncio.getTitulo()</h5>
@@ -19,8 +19,8 @@
                 </div>
             </div>
             @if(index % 3 == 0) {
-            </div>
-            <div class="card-deck pt-4 mt-md-4">
+<!--            </div>-->
+<!--            <div class="card-deck pt-4 mt-md-4">-->
                 }
             }
         </div>
