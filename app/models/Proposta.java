@@ -8,6 +8,8 @@ public class Proposta {
   public static String STATUS_AGUARDANDO = "aguardando";
   public static String STATUS_RECUSADA = "recusada";
 
+  public static int lastInsertedId = 1;
+
   public int id;
   public String status;
   public String descricao;
@@ -15,7 +17,7 @@ public class Proposta {
   public int anuncio_id;
 
   public Proposta(int id, String status, String descricao,int usuario_id, int anuncio_id){
-    this.id = id;
+    this.id = id + Proposta.lastInsertedId++;
     this.status = status;
     this.usuario_id = usuario_id;
     this.descricao = descricao;
