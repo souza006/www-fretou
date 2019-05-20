@@ -1,6 +1,9 @@
 package controllers;
 
 import models.Anuncio;
+import models.Proposta;
+import play.data.Form;
+import play.data.FormFactory;
 import play.mvc.*;
 import javax.inject.Inject;
 import java.util.Set;
@@ -10,6 +13,9 @@ import java.util.Set;
  * to the application's home page.
  */
 public class AnuncioController extends Controller {
+
+    @Inject
+    FormFactory formFactory;
 
    /*
     * @method: index
@@ -33,7 +39,9 @@ public class AnuncioController extends Controller {
    */
 
     public Result show(int id) {
-        return ok(views.html.pages.anuncio.render(Anuncio.findById(id)));
+        Form propostaForm = formFactory.form(Proposta.class);
+
+        return ok(views.html.pages.anuncio.render(Anuncio.findById(id), propostaForm));
     }
 
    /*

@@ -9,7 +9,7 @@ public class Anuncio {
     public String titulo;
     public String descricao;
 
-    public Anuncio(int id, String titulo, String descricao,int usuario_id){
+    public Anuncio(int id, String titulo, String descricao, int usuario_id){
         this.id = id;
         this.titulo = titulo;
         this.descricao = descricao;

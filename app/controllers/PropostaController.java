@@ -1,5 +1,6 @@
 package controllers;
 
+import models.Anuncio;
 import play.mvc.*;
 import javax.inject.Inject;
 import java.util.*;
@@ -69,7 +70,11 @@ public class PropostaController extends Controller {
    */
 
     public Result realizar(int id) {
-        return ok("Handling HTTP POST to send a proposta.");
+        Anuncio anuncio = Anuncio.findById(id);
+        assert anuncio != null;
+        Proposta p = new Proposta(id + 2, Proposta.STATUS_AGUARDANDO, anuncio.usuario_id, anuncio.id);
+        anuncio.addProposta(p);
+        return redirect(routes.AnuncioController.index());
     }
 
    /*

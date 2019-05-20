@@ -10,6 +10,7 @@ public class Proposta {
 
   public int id;
   public String status;
+  public String descricao;
   public int usuario_id;
   public int anuncio_id;
 
@@ -17,6 +18,7 @@ public class Proposta {
     this.id = id;
     this.status = status;
     this.usuario_id = usuario_id;
+
     this.anuncio_id = anuncio_id;
   }
 
