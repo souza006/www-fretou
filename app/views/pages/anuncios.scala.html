@@ -2,36 +2,47 @@
 
 @main("Anúncio", "yes"){
 
-<div class="row">
-
-<!--    <div id="sidebar" class="col-3 border-right">-->
-<!--        <h3>Conta</h3>-->
-<!--        <a href="#" class="menu-item">Informações da conta</a>-->
-<!--        <a href="#" class="menu-item">Informações pessoais</a>-->
-<!--        <a href="#" class="menu-item">Informações de segurança</a>-->
-<!--        <h3>Anúncios</h3>-->
-<!--        <a href="#" class="menu-item">Meus anúncios</a>-->
-<!--        <a href="/usuario/propostas" class="menu-item">Propostas</a>-->
-<!--    </div>-->
-    <div class="col-12">
-        <h2>Anúncios</h2>
-        <div class="row">
-            @for(anuncio <- anuncios){
-            <div class="col-lg-3 col-md-4 col-sm-6 col-12">
-                <div id="anuncio-home">
-                    <div id="anuncio-detalhes">
-                        <a href="/anuncio/@anuncio.getId()">
-                            <img class="anuncio-miniatura" src="https://placehold.it/250x280">
-                        </a>
-                        <a class="anuncio-propostas" href="/anuncio/@anuncio.getId()">@anuncio.getId()</a>
+<section class="wthree-row w3-about py-md-5">
+    <div class="container py-4 mt-2">
+        <h3 class="tittle-w3ls text-center mb-3">Anúncios</h3>
+        <p class="tit text-center mx-auto">Anúncios do sistema</p>
+        <div class="card-deck pt-4 mt-md-4">
+            @for((anuncio, index) <- anuncios.zipWithIndex){
+            <div class="card">
+                <img src='@routes.Assets.versioned("images/g1.jpg")' class="img-fluid" alt="Anúncio - @anuncio.getTitulo()">
+                <div class="card-body w3ls-card">
+                    <h5 class="card-title">@anuncio.getTitulo()</h5>
+                    <p class="card-text mb-3">Localização - UF <br /> @anuncio.propostas().size() proposta(s)</p>
+                    <div class="ab_button">
+                        <a href="@routes.AnuncioController.show(anuncio.getId())" class="btn btn-primary btn-lg hvr-underline-from-left">Ver anúncio</a>
                     </div>
-                    <a class="anuncio-titulo" href="/anuncio/@anuncio.getId()">@anuncio.getTitulo()</a>
                 </div>
             </div>
+            @if(index % 3 == 0) {
+            </div>
+            <div class="card-deck pt-4 mt-md-4">
+                }
             }
         </div>
     </div>
+</section>
+<!--<div class="row">-->
 
-</div>
+<!--&lt;!&ndash;    <div id="sidebar" class="col-3 border-right">&ndash;&gt;-->
+<!--&lt;!&ndash;        <h3>Conta</h3>&ndash;&gt;-->
+<!--&lt;!&ndash;        <a href="#" class="menu-item">Informações da conta</a>&ndash;&gt;-->
+<!--&lt;!&ndash;        <a href="#" class="menu-item">Informações pessoais</a>&ndash;&gt;-->
+<!--&lt;!&ndash;        <a href="#" class="menu-item">Informações de segurança</a>&ndash;&gt;-->
+<!--&lt;!&ndash;        <h3>Anúncios</h3>&ndash;&gt;-->
+<!--&lt;!&ndash;        <a href="#" class="menu-item">Meus anúncios</a>&ndash;&gt;-->
+<!--&lt;!&ndash;        <a href="/usuario/propostas" class="menu-item">Propostas</a>&ndash;&gt;-->
+<!--&lt;!&ndash;    </div>&ndash;&gt;-->
+<!--    <div class="col-12">-->
+<!--        <h2>Anúncios</h2>-->
+<!--        <div class="row">-->
+<!--        </div>-->
+<!--    </div>-->
+
+<!--</div>-->
 
 }
