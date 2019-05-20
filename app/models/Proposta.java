@@ -22,6 +22,10 @@ public class Proposta {
     this.anuncio_id = anuncio_id;
   }
 
+  public Proposta() {
+    this.status = STATUS_AGUARDANDO;
+  }
+
   public void setId(int id){
     this.id = id;
   }
