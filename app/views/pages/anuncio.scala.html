@@ -2,13 +2,35 @@
 @import helper._
 
 @scripts = {
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@@8"></script>
 <script type="text/javascript">
 
     function showPropostaForm() {
     let el = document.querySelector('#propostaForm');
     el.classList.toggle("d-none");
     }
+
+    function submeterProposta(event) {
+    event.preventDefault();
+    let formulario = document.getElementById("formProposta")
+      Swal.fire({
+      title: 'Você tem certeza?',
+      text: "Ao clicar em confirmar, a sua proposta será enviada!",
+      type: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Sim, enviar!'
+    }).then((result) => {
+      if (result.value) {
+        formulario.submit();
+      }
+    });
+    }
+
+    document.getElementById('enviar-proposta-button').addEventListener('click', submeterProposta, false);
   </script>
+
 }
 
 @main("Título do Anuncio","no", scripts){
@@ -23,18 +45,18 @@
         </div>
         <div class="col-6 text-center">
           <h3>Valor sugerido: R$ 123</h3>
-          <button class="btn btn-lg btn-secondary" type="button" onclick="showPropostaForm()">Enviar proposta</button>
+          <button class="btn btn-lg btn-secondary" type="button" onclick="showPropostaForm()">Adicionar proposta</button>
         </div>
         <div class="col-12 d-none" id="propostaForm">
           <h3>Formulário de envio de propostas</h3>
 
-          @helper.form(action = routes.PropostaController.realizar(anuncio.getId())) {
+          @helper.form(action = routes.PropostaController.realizar(anuncio.getId()), 'id -> "formProposta") {
           <div class="form-group">
             <label for="descricao">Descrição</label>
             <textarea name="descricao" id="descricao" cols="30" rows="10" class="form-control"></textarea>
           </div>
 
-          <button type="submit" class="btn btn-primary">Enviar proposta</button>
+          <button class="btn btn-primary" id="enviar-proposta-button">Enviar proposta</button>
           }
         </div>
       </div>
