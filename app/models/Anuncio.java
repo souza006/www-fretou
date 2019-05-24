@@ -75,7 +75,7 @@ public class Anuncio {
         this.propostas.add(proposta);
     }
 
-    public Set<Proposta> propostas () { return propostas; }
+    public Set<Proposta> propostas() { return propostas; }
 
     private void generatePropostas()
     {
