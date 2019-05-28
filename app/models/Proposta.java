@@ -1,6 +1,7 @@
 package models;
 
 import java.util.*;
+import java.text.SimpleDateFormat;
 
 public class Proposta {
 
@@ -13,14 +14,16 @@ public class Proposta {
   public int id;
   public String status;
   public String descricao;
+  public Date data;
   public int usuario_id;
   public Anuncio anuncio;
 
-  public Proposta(int id, String status, String descricao,int usuario_id, int anuncio_id){
+  public Proposta(int id, String status, String descricao, Date data, int usuario_id, int anuncio_id){
     this.id = id + Proposta.lastInsertedId++;
     this.status = status;
     this.usuario_id = usuario_id;
     this.descricao = descricao;
+    this.data = data;
     this.anuncio = Anuncio.findById(anuncio_id);
   }
 
@@ -34,6 +37,15 @@ public class Proposta {
 
   public int getId(){
     return this.id;
+  }
+
+  public void setData(Date data){
+    this.data = data;
+  }
+
+  public String getData(){
+    String dt = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss").format(this.data);
+    return dt;
   }
 
   public void aceitar()
@@ -71,12 +83,12 @@ public class Proposta {
 
   static {
     propostas = new HashSet<>();
-    propostas.add(new Proposta(1, STATUS_AGUARDANDO, "Lorem Ipsum",1, 1) );
-    propostas.add(new Proposta(3,STATUS_AGUARDANDO, "Lorem Ipsum", 1, 3) );
-    propostas.add(new Proposta(46,STATUS_AGUARDANDO, "Lorem Ipsum", 1, 46) );
-    propostas.add(new Proposta(16,STATUS_AGUARDANDO, "Lorem Ipsum", 1, 16) );
-    propostas.add(new Proposta(543,STATUS_AGUARDANDO, "Lorem Ipsum", 1, 543) );
-    propostas.add(new Proposta(21,STATUS_AGUARDANDO, "Lorem Ipsum", 1, 21) );
+    propostas.add(new Proposta(1, STATUS_AGUARDANDO, "Lorem Ipsum",  new Date(System.currentTimeMillis()), 1, 1) );
+    propostas.add(new Proposta(2, STATUS_AGUARDANDO, "Lorem Ipsum",  new Date(System.currentTimeMillis()), 1, 3) );
+    propostas.add(new Proposta(3, STATUS_AGUARDANDO, "Lorem Ipsum",  new Date(System.currentTimeMillis()), 1, 16) );
+    propostas.add(new Proposta(4, STATUS_AGUARDANDO, "Lorem Ipsum",  new Date(System.currentTimeMillis()), 1, 21) );
+    propostas.add(new Proposta(5, STATUS_AGUARDANDO, "Lorem Ipsum",  new Date(System.currentTimeMillis()), 1, 46) );
+    propostas.add(new Proposta(6, STATUS_AGUARDANDO, "Lorem Ipsum",  new Date(System.currentTimeMillis()), 1, 543) );
   }
 
   public static Set<Proposta> all() {
