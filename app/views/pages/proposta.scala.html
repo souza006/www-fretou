@@ -17,7 +17,7 @@
       <h2>#@p.getId() - @p.anuncio().getTitulo()</h2>
       <div class="row">
         <div class="col-12">
-          <span class="proposta-detalhes">Proposta enviada por <b>Usuario</b></span>
+          <span class="proposta-detalhes">Proposta enviada por <b>Usuario</b> em <b>@p.getData()</b></span>
           <p class="text-justify">@p.getDescricao()</p>
           <form action='/usuario/propostas/responder/@p.getId()/aceitar' method="post"><button class="btn btn-success">Aceitar proposta</button></form>
           <form action='/usuario/propostas/responder/@p.getId()/recusar' method="post"><button class="btn btn-danger">Recusar proposta</button></form>
