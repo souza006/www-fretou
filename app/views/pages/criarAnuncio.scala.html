@@ -1,4 +1,4 @@
-@(categorias: String[])
+@(categorias: Array[String])
 
 @main("Crie seu anúncio","no"){
 <div class="container my-5">
@@ -23,7 +23,7 @@
                     <select class="custom-select" id="Categoria" name="Categoria">
                         <option selected disabled>Selecione uma opção...</option>
                         @for(categoria <- categorias) {
-                        <option value="@categoria">@categoria</option>
+                        <option value="@categoria">@categoria.capitalize</option>
                         }
                     </select>
                 </div>

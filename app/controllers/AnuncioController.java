@@ -53,7 +53,7 @@ public class AnuncioController extends Controller {
 
     public Result create() {
 
-        return ok(views.html.pages.criarAnuncio.render());
+        return ok(views.html.pages.criarAnuncio.render(Anuncio.CATEGORIAS));
     }
 
    /*
