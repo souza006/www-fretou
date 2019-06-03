@@ -4,6 +4,18 @@ import java.util.*;
 
 public class Anuncio {
 
+    public static String CATEGORIA_PERIGOSA = "perigosa";
+    public static String CATEGORIA_PESADA = "pesada";
+    public static String CATEGORIA_GRANEL = "granel";
+    public static String CATEGORIA_NEOGRANEL = "neogranel";
+
+    public static String[] CATEGORIAS = {
+            CATEGORIA_PERIGOSA,
+            CATEGORIA_PESADA,
+            CATEGORIA_GRANEL,
+            CATEGORIA_NEOGRANEL
+    };
+
     public int id;
     public int usuario_id;
     public String titulo;
