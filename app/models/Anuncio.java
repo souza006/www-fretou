@@ -13,8 +13,9 @@ public class Anuncio {
     public String destino;
     public double peso;
     public double valor;
+    public Date data;
 
-    public Anuncio(int id, String titulo, String categoria , double peso , String descricao, double valor, String origem , String destino ,int usuario_id ){
+    public Anuncio(int id, String titulo, String categoria , double peso , String descricao, double valor, String origem , String destino ,int usuario_id, Date data){
         this.id = id;
         this.titulo = titulo;
         this.categoria = categoria;
@@ -24,6 +25,7 @@ public class Anuncio {
         this.valor = valor;
         this.peso = peso;
         this.usuario_id = usuario_id;
+        this.data = data;
         this.propostas = new HashSet<>();
     }
 
@@ -71,6 +73,10 @@ public class Anuncio {
 
     public double getPeso() { return this.peso; }
 
+    public void setData(Date data) {this.data = data;}
+
+    public Date getData() { return this.data; }
+
     private static Set<Anuncio> anuncios;
     private Set<Proposta> propostas;
 
@@ -80,7 +86,7 @@ public class Anuncio {
 
         // new Anuncio(int id, String titulo, String categoria , double peso , String descricao, double valor, String origem , String destino ,int usuario_id )
 
-        anuncios.add(new Anuncio(1,"Carga d'água - " + 1, "Pesada- "  + 1, 0.25 , "- oi tudobom -", 0.2 , "Casa" , "natal" , 1 ));
+        anuncios.add(new Anuncio(1,"Carga d'água - " + 1, "Pesada- "  + 1, 0.25 , "- oi tudobom -", 0.2 , "Casa" , "natal" , 1, new Date()));
         /*anuncios.add(new Anuncio(3,"Anúncio - " + 3, "Descrição incrível - " + 3, 3) );
         anuncios.add(new Anuncio(46,"Anúncio - " + 46, "Descrição incrível - " + 46, 46) );
         anuncios.add(new Anuncio(16,"Anúncio - " + 16, "Descrição incrível - " + 16, 16) );

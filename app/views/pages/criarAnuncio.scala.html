@@ -1,0 +1,37 @@
+@main("Crie seu anúncio","no"){
+<div class="container my-5">
+    <div class="row">
+        <div class="col-12">
+
+            <h2>Crie Aqui seu anuncio</h2><br>
+            @helper.form(action = routes.AnuncioController.store, 'id -> "formAnuncio"){
+            <div class="form-group">
+                <label for="titulo">Titulo</label>
+                <input type="text" name="titulo" id="titulo" class="form-control" style="width: 30%; height: 34px;" placeholder="Titulo do anúncio">
+                <br>
+                <label for="descricao">Crie uma descrição para o seu anúncio</label>
+                <br>
+                <input type="text" name="titulo"  placeholder="Descreva detalhadamente o seu frete" class="form-control" style="width: 45%; height: 450px;">
+            </div>
+            <br>
+
+            <div class="btn-group">
+                <div class="col">
+                    <label for="Categoria">Categoria</label>
+                    <select class="custom-select" id="Categoria" name="Categoria">
+                        <option selected disabled>selecione...</option>
+                        <option value="Perigosa">Perigosa</option>
+                        <option value="Pesada">Pesada</option>
+                        <option value="Granel">Granel</option>
+                        <option value="NeoGranel">NeoGranel</option>
+                    </select>
+                </div>
+            </div>
+            <br><br>
+
+            <button class="btn btn-primary" id="enviar-proposta-button">Publicar Anuncio</button>
+            }
+        </div>
+    </div>
+</div>
+}
