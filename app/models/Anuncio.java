@@ -18,13 +18,13 @@ public class Anuncio {
 
     public int id;
     public int usuario_id;
-    public String titulo;
-    public String categoria;
-    public String descricao;
-    public String origem ;
-    public String destino;
-    public double peso;
-    public double valor;
+    private String titulo;
+    private String categoria;
+    private String descricao;
+    private String origem ;
+    private String destino;
+    private double peso;
+    private double valor;
     public Date data;
 
     public Anuncio(int id, String titulo, String categoria , double peso , String descricao, double valor, String origem , String destino ,int usuario_id, Date data){
