@@ -28,7 +28,7 @@ public class Usuario {
     usuarios.add(new Usuario(11, TIPO_FRETISTA, "David Héricles"));
     usuarios.add(new Usuario(111, TIPO_CONTRATANTE, "Eduardo Riev"));
     usuarios.add(new Usuario(1111, TIPO_FRETISTA, "Elvis Silva"));
-    usuarios.add(new Usuario(11111, TIPO_CONTRATANTE, "Daniel Souza"));
+    usuarios.add(new Usuario(11111, TIPO_CONTRATANTE, "Esther Aragão"));
     usuarios.add(new Usuario(111111, TIPO_FRETISTA, "Hérikle Mesquita"));
   }
 
@@ -58,6 +58,14 @@ public class Usuario {
 
   public String getTipo(){
     return this.tipo;
+  }
+
+  public void setNome(String nome){
+    this.nome = nome;
+  }
+
+  public String getNome(){
+    return this.nome;
   }
 
 }

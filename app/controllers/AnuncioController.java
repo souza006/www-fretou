@@ -2,6 +2,7 @@ package controllers;
 
 import models.Anuncio;
 import models.Proposta;
+import models.Usuario;
 import play.data.Form;
 import play.data.FormFactory;
 import play.mvc.*;
@@ -53,7 +54,7 @@ public class AnuncioController extends Controller {
 
     public Result create() {
 
-        return ok(views.html.pages.criarAnuncio.render(Anuncio.CATEGORIAS));
+        return ok(views.html.pages.criarAnuncio.render(Anuncio.CATEGORIAS, Usuario.filterByTipo(Usuario.TIPO_CONTRATANTE)));
     }
 
    /*
