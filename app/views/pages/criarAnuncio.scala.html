@@ -1,3 +1,5 @@
+@(categorias: String[])
+
 @main("Crie seu anúncio","no"){
 <div class="container my-5">
     <div class="row">
@@ -19,11 +21,10 @@
                 <div class="col">
                     <label for="Categoria">Categoria</label>
                     <select class="custom-select" id="Categoria" name="Categoria">
-                        <option selected disabled>selecione...</option>
-                        <option value="Perigosa">Perigosa</option>
-                        <option value="Pesada">Pesada</option>
-                        <option value="Granel">Granel</option>
-                        <option value="NeoGranel">NeoGranel</option>
+                        <option selected disabled>Selecione uma opção...</option>
+                        @for(categoria <- categorias) {
+                        <option value="@categoria">@categoria</option>
+                        }
                     </select>
                 </div>
             </div>
