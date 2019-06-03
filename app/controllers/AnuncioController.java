@@ -52,7 +52,8 @@ public class AnuncioController extends Controller {
    */
 
     public Result create() {
-        return ok("Handlig HTTP GET to show the view to create an anuncio.");
+
+        return ok(views.html.pages.criarAnuncio.render());
     }
 
    /*
