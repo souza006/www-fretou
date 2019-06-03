@@ -36,22 +36,13 @@ public class Usuario {
     return usuarios;
   }
 
-  public static Set<Usuario> fretistas() {
-    Set<Usuario> fretistas = new HashSet<>();
+  public static Set<Usuario> filterByTipo(String tipo) {
+    Set<Usuario> filtrados = new HashSet<>();
     for (Usuario usuario : usuarios)
-      if (usuario.tipo.equals(TIPO_FRETISTA))
-        fretistas.add(usuario);
+      if (usuario.tipo.equals(tipo))
+        filtrados.add(usuario);
 
-    return fretistas;
-  }
-
-  public static Set<Usuario> contratantes() {
-    Set<Usuario> contratantes = new HashSet<>();
-    for (Usuario usuario : usuarios)
-      if (usuario.tipo.equals(TIPO_CONTRATANTE))
-        contratantes.add(usuario);
-
-    return contratantes;
+    return filtrados;
   }
 
   public void setId(int id){
