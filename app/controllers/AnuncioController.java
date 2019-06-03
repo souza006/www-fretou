@@ -7,7 +7,10 @@ import play.data.Form;
 import play.data.FormFactory;
 import play.mvc.*;
 import javax.inject.Inject;
+import java.util.Date;
 import java.util.Set;
+import java.text.SimpleDateFormat;
+
 
 /**
  * This controller contains an action to handle HTTP requests
@@ -65,7 +68,9 @@ public class AnuncioController extends Controller {
    */
 
     public Result store() {
-        return ok("Handling HTTP POST to store anuncio");
+        Form<Anuncio> anuncioForm = formFactory.form(Anuncio.class).bindFromRequest();
+
+        return redirect(routes.AnuncioController.index());
     }
 
    /*

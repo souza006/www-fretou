@@ -9,6 +9,9 @@ public class Anuncio {
     public static String CATEGORIA_GRANEL = "granel";
     public static String CATEGORIA_NEOGRANEL = "neogranel";
 
+    public static int lastInsertedId = 1;
+
+
     public static String[] CATEGORIAS = {
             CATEGORIA_PERIGOSA,
             CATEGORIA_PESADA,
@@ -98,7 +101,7 @@ public class Anuncio {
 
         // new Anuncio(int id, String titulo, String categoria , double peso , String descricao, double valor, String origem , String destino ,int usuario_id )
 
-        anuncios.add(new Anuncio(1,"Carga d'água - " + 1, "Pesada- "  + 1, 0.25 , "- oi tudobom -", 0.2 , "Casa" , "natal" , 1, new Date()));
+        anuncios.add(new Anuncio(lastInsertedId++,"Carga d'água - " + 1, "Pesada- "  + 1, 0.25 , "- oi tudobom -", 0.2 , "Casa" , "natal" , 1, new Date()));
         /*anuncios.add(new Anuncio(3,"Anúncio - " + 3, "Descrição incrível - " + 3, 3) );
         anuncios.add(new Anuncio(46,"Anúncio - " + 46, "Descrição incrível - " + 46, 46) );
         anuncios.add(new Anuncio(16,"Anúncio - " + 16, "Descrição incrível - " + 16, 16) );
