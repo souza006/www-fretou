@@ -4,18 +4,34 @@ import java.util.*;
 
 public class Anuncio {
 
+    public static String CATEGORIA_PERIGOSA = "perigosa";
+    public static String CATEGORIA_PESADA = "pesada";
+    public static String CATEGORIA_GRANEL = "granel";
+    public static String CATEGORIA_NEOGRANEL = "neogranel";
+
+    public static int lastInsertedId = 1;
+
+
+    public static String[] CATEGORIAS = {
+            CATEGORIA_PERIGOSA,
+            CATEGORIA_PESADA,
+            CATEGORIA_GRANEL,
+            CATEGORIA_NEOGRANEL
+    };
+
     public int id;
     public int usuario_id;
-    public String titulo;
-    public String categoria;
-    public String descricao;
-    public String origem ;
-    public String destino;
-    public double peso;
-    public double valor;
+    private String titulo;
+    private String categoria;
+    private String descricao;
+    private String origem ;
+    private String destino;
+    private double peso;
+    private double valor;
     public Date data;
 
-    public Anuncio(int id, String titulo, String categoria , double peso , String descricao, double valor, String origem , String destino ,int usuario_id, Date data){
+    public Anuncio(int id, String titulo, String categoria , double peso, double valor, String descricao,
+                   String origem , String destino, int usuario_id, Date data){
         this.id = id;
         this.titulo = titulo;
         this.categoria = categoria;
@@ -27,6 +43,11 @@ public class Anuncio {
         this.usuario_id = usuario_id;
         this.data = data;
         this.propostas = new HashSet<>();
+    }
+
+    public Anuncio()
+    {
+        this.id = lastInsertedId;
     }
 
 
@@ -86,7 +107,7 @@ public class Anuncio {
 
         // new Anuncio(int id, String titulo, String categoria , double peso , String descricao, double valor, String origem , String destino ,int usuario_id )
 
-        anuncios.add(new Anuncio(1,"Carga d'água - " + 1, "Pesada- "  + 1, 0.25 , "- oi tudobom -", 0.2 , "Casa" , "natal" , 1, new Date()));
+        anuncios.add(new Anuncio(lastInsertedId++,"Carga d'água - " + 1, "Pesada- "  + 1, 0.25 ,  0.2 , "- oi tudobom -", "Casa" , "natal" , 1, new Date()));
         /*anuncios.add(new Anuncio(3,"Anúncio - " + 3, "Descrição incrível - " + 3, 3) );
         anuncios.add(new Anuncio(46,"Anúncio - " + 46, "Descrição incrível - " + 46, 46) );
         anuncios.add(new Anuncio(16,"Anúncio - " + 16, "Descrição incrível - " + 16, 16) );
@@ -107,6 +128,11 @@ public class Anuncio {
                 return anuncio;
 
         return null;
+    }
+
+    public static void add(Anuncio a)
+    {
+        anuncios.add(a);
     }
 
     public void addProposta(Proposta proposta)

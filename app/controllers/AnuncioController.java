@@ -2,11 +2,17 @@ package controllers;
 
 import models.Anuncio;
 import models.Proposta;
+import models.Usuario;
+import play.data.DynamicForm;
 import play.data.Form;
 import play.data.FormFactory;
 import play.mvc.*;
 import javax.inject.Inject;
+import java.text.ParseException;
+import java.util.Date;
 import java.util.Set;
+import java.text.SimpleDateFormat;
+
 
 /**
  * This controller contains an action to handle HTTP requests
@@ -53,7 +59,7 @@ public class AnuncioController extends Controller {
 
     public Result create() {
 
-        return ok(views.html.pages.criarAnuncio.render());
+        return ok(views.html.pages.criarAnuncio.render(Anuncio.CATEGORIAS, Usuario.filterByTipo(Usuario.TIPO_CONTRATANTE)));
     }
 
    /*
@@ -63,8 +69,17 @@ public class AnuncioController extends Controller {
     * @http: POST
    */
 
-    public Result store() {
-        return ok("Handling HTTP POST to store anuncio");
+    public Result store() throws ParseException {
+        DynamicForm anuncioForm = formFactory.form().bindFromRequest();
+
+        Date data = new SimpleDateFormat("yyyy-MM-dd").parse(anuncioForm.get("data").toString());
+
+        Anuncio.add(new Anuncio(Anuncio.lastInsertedId++, anuncioForm.get("titulo"), anuncioForm.get("categoria"),
+                Double.parseDouble(anuncioForm.get("valor")), Double.parseDouble(anuncioForm.get("peso")),
+                anuncioForm.get("descricao"), anuncioForm.get("origem"), anuncioForm.get("destino"),
+                Integer.parseInt(anuncioForm.get("usuario_id")), data));
+
+        return redirect(routes.AnuncioController.index());
     }
 
    /*
