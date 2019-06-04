@@ -72,7 +72,8 @@ public class AnuncioController extends Controller {
     public Result store() throws ParseException {
         DynamicForm anuncioForm = formFactory.form().bindFromRequest();
 
-        Date data = new SimpleDateFormat("yyyy-MM-dd").parse(anuncioForm.get("data").toString());
+        //Date data = new SimpleDateFormat("yyyy-MM-dd").parse(anuncioForm.get("data").toString());
+        Date data = new Date(System.currentTimeMillis());
 
         Anuncio.add(new Anuncio(Anuncio.lastInsertedId + 1, anuncioForm.get("titulo"), anuncioForm.get("categoria"),
                 Double.parseDouble(anuncioForm.get("valor")), Double.parseDouble(anuncioForm.get("peso")),

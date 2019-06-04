@@ -1,6 +1,7 @@
 package models;
 
 import java.util.*;
+import java.text.SimpleDateFormat;
 
 public class Anuncio {
 
@@ -97,7 +98,7 @@ public class Anuncio {
 
     public void setData(Date data) {this.data = data;}
 
-    public Date getData() { return this.data; }
+    public String getData() { return new SimpleDateFormat("dd/MM/yyyy hh:mm").format(this.data); }
 
     private static Set<Anuncio> anuncios;
     private Set<Proposta> propostas;
