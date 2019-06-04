@@ -84,11 +84,11 @@ public class Proposta {
   static {
     propostas = new HashSet<>();
     propostas.add(new Proposta(1, STATUS_AGUARDANDO, "Lorem Ipsum",  new Date(System.currentTimeMillis()), 1, 1) );
-    propostas.add(new Proposta(2, STATUS_AGUARDANDO, "Lorem Ipsum",  new Date(System.currentTimeMillis()), 1, 3) );
-    propostas.add(new Proposta(3, STATUS_AGUARDANDO, "Lorem Ipsum",  new Date(System.currentTimeMillis()), 1, 16) );
-    propostas.add(new Proposta(4, STATUS_AGUARDANDO, "Lorem Ipsum",  new Date(System.currentTimeMillis()), 1, 21) );
-    propostas.add(new Proposta(5, STATUS_AGUARDANDO, "Lorem Ipsum",  new Date(System.currentTimeMillis()), 1, 46) );
-    propostas.add(new Proposta(6, STATUS_AGUARDANDO, "Lorem Ipsum",  new Date(System.currentTimeMillis()), 1, 543) );
+    propostas.add(new Proposta(2, STATUS_AGUARDANDO, "Lorem Ipsum",  new Date(System.currentTimeMillis()), 1, 2) );
+    propostas.add(new Proposta(3, STATUS_AGUARDANDO, "Lorem Ipsum",  new Date(System.currentTimeMillis()), 1, 3) );
+    propostas.add(new Proposta(4, STATUS_AGUARDANDO, "Lorem Ipsum",  new Date(System.currentTimeMillis()), 1, 4) );
+    propostas.add(new Proposta(5, STATUS_AGUARDANDO, "Lorem Ipsum",  new Date(System.currentTimeMillis()), 1, 5) );
+    propostas.add(new Proposta(6, STATUS_AGUARDANDO, "Lorem Ipsum",  new Date(System.currentTimeMillis()), 1, 6) );
   }
 
   public static Set<Proposta> all() {

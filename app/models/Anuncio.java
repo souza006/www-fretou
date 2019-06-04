@@ -107,12 +107,13 @@ public class Anuncio {
 
         // new Anuncio(int id, String titulo, String categoria , double peso , String descricao, double valor, String origem , String destino ,int usuario_id )
 
-        anuncios.add(new Anuncio(lastInsertedId++,"Carga d'água - " + 1, "Pesada- "  + 1, 0.25 ,  0.2 , "- oi tudobom -", "Casa" , "natal" , 1, new Date()));
-        /*anuncios.add(new Anuncio(3,"Anúncio - " + 3, "Descrição incrível - " + 3, 3) );
-        anuncios.add(new Anuncio(46,"Anúncio - " + 46, "Descrição incrível - " + 46, 46) );
-        anuncios.add(new Anuncio(16,"Anúncio - " + 16, "Descrição incrível - " + 16, 16) );
-        anuncios.add(new Anuncio(543,"Anúncio - " + 543, "Descrição incrível - " + 543, 543) );
-        anuncios.add(new Anuncio(21,"Anúncio - " + 21, "Descrição incrível - " + 21, 21) );**/
+        anuncios.add(new Anuncio(1,"Carga d'água - " + 1, "Pesada- "  + 1, 0.25 ,  0.2 , "- oi tudobom -", "Casa" , "natal" , 1, new Date()));
+        anuncios.add(new Anuncio(2,"Carga d'água - " + 1, "Pesada- "  + 1, 0.25 ,  0.2 , "- oi tudobom -", "Casa" , "natal" , 1, new Date()));
+        anuncios.add(new Anuncio(3,"Carga d'água - " + 1, "Pesada- "  + 1, 0.25 ,  0.2 , "- oi tudobom -", "Casa" , "natal" , 1, new Date()));
+        anuncios.add(new Anuncio(4,"Carga d'água - " + 1, "Pesada- "  + 1, 0.25 ,  0.2 , "- oi tudobom -", "Casa" , "natal" , 1, new Date()));
+        anuncios.add(new Anuncio(5,"Carga d'água - " + 1, "Pesada- "  + 1, 0.25 ,  0.2 , "- oi tudobom -", "Casa" , "natal" , 1, new Date()));
+        anuncios.add(new Anuncio(6,"Carga d'água - " + 1, "Pesada- "  + 1, 0.25 ,  0.2 , "- oi tudobom -", "Casa" , "natal" , 1, new Date()));
+        
         for (Anuncio anuncio: anuncios)
             anuncio.generatePropostas();
     }
