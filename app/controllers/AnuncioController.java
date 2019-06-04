@@ -74,7 +74,7 @@ public class AnuncioController extends Controller {
 
         Date data = new SimpleDateFormat("yyyy-MM-dd").parse(anuncioForm.get("data").toString());
 
-        Anuncio.add(new Anuncio(Anuncio.lastInsertedId++, anuncioForm.get("titulo"), anuncioForm.get("categoria"),
+        Anuncio.add(new Anuncio(Anuncio.lastInsertedId + 1, anuncioForm.get("titulo"), anuncioForm.get("categoria"),
                 Double.parseDouble(anuncioForm.get("valor")), Double.parseDouble(anuncioForm.get("peso")),
                 anuncioForm.get("descricao"), anuncioForm.get("origem"), anuncioForm.get("destino"),
                 Integer.parseInt(anuncioForm.get("usuario_id")), data));

@@ -43,6 +43,7 @@ public class Anuncio {
         this.usuario_id = usuario_id;
         this.data = data;
         this.propostas = new HashSet<>();
+        lastInsertedId = id;
     }
 
     public Anuncio()
@@ -107,13 +108,13 @@ public class Anuncio {
 
         // new Anuncio(int id, String titulo, String categoria , double peso , String descricao, double valor, String origem , String destino ,int usuario_id )
 
-        anuncios.add(new Anuncio(1,"Carga d'água - " + 1, "Pesada- "  + 1, 0.25 ,  0.2 , "- oi tudobom -", "Casa" , "natal" , 1, new Date()));
-        anuncios.add(new Anuncio(2,"Carga d'água - " + 1, "Pesada- "  + 1, 0.25 ,  0.2 , "- oi tudobom -", "Casa" , "natal" , 1, new Date()));
-        anuncios.add(new Anuncio(3,"Carga d'água - " + 1, "Pesada- "  + 1, 0.25 ,  0.2 , "- oi tudobom -", "Casa" , "natal" , 1, new Date()));
-        anuncios.add(new Anuncio(4,"Carga d'água - " + 1, "Pesada- "  + 1, 0.25 ,  0.2 , "- oi tudobom -", "Casa" , "natal" , 1, new Date()));
-        anuncios.add(new Anuncio(5,"Carga d'água - " + 1, "Pesada- "  + 1, 0.25 ,  0.2 , "- oi tudobom -", "Casa" , "natal" , 1, new Date()));
-        anuncios.add(new Anuncio(6,"Carga d'água - " + 1, "Pesada- "  + 1, 0.25 ,  0.2 , "- oi tudobom -", "Casa" , "natal" , 1, new Date()));
-        
+        anuncios.add(new Anuncio(lastInsertedId,"Carga d'água - " + 1, "Pesada- "  + 1, 0.25 ,  0.2 , "- oi tudobom -", "Casa" , "natal" , 1, new Date()));
+        anuncios.add(new Anuncio(lastInsertedId + 1,"Nova caixinha - " + 1, "Pesada- "  + 1, 0.25 ,  0.2 , "- oi tudobom -", "Casa" , "natal" , 1, new Date()));
+        anuncios.add(new Anuncio(lastInsertedId + 1,"meu deus do ceu - " + 1, "Pesada- "  + 1, 0.25 ,  0.2 , "- oi tudobom -", "Casa" , "natal" , 1, new Date()));
+        anuncios.add(new Anuncio(lastInsertedId + 1,"Casa nova - " + 1, "Pesada- "  + 1, 0.25 ,  0.2 , "- oi tudobom -", "Casa" , "natal" , 1, new Date()));
+        anuncios.add(new Anuncio(lastInsertedId + 1,"Cachorro vivo - " + 1, "Pesada- "  + 1, 0.25 ,  0.2 , "- oi tudobom -", "Casa" , "natal" , 1, new Date()));
+        anuncios.add(new Anuncio(lastInsertedId + 1,"Corre manooo - " + 1, "Pesada- "  + 1, 0.25 ,  0.2 , "- oi tudobom -", "Casa" , "natal" , 1, new Date()));
+
         for (Anuncio anuncio: anuncios)
             anuncio.generatePropostas();
     }
