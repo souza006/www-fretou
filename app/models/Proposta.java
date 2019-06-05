@@ -31,6 +31,10 @@ public class Proposta {
     this.status = STATUS_AGUARDANDO;
   }
 
+  static {
+    propostas = new HashSet<>();
+  }
+
   public void setId(int id){
     this.id = id;
   }
