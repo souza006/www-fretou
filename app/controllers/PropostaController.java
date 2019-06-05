@@ -74,15 +74,15 @@ public class PropostaController extends Controller {
     * @http: POST
    */
 
-    public Result realizar(int id) {
-        Anuncio anuncio = Anuncio.findById(id);
+    public Result realizar(Integer id) {
+        Anuncio anuncio = Anuncio.find.byId(id.doubleValue());
         assert anuncio != null;
         Form<Proposta> propostaForm = formFactory.form(Proposta.class).bindFromRequest();
 
         Proposta p = new Proposta(id + 2, Proposta.STATUS_AGUARDANDO,
                 propostaForm.get().getDescricao(),  new Date(System.currentTimeMillis()), anuncio.usuario_id, anuncio.id);
 
-        anuncio.addProposta(p);
+        //anuncio.addProposta(p);
         Proposta.all().add(p);
         return redirect(routes.AnuncioController.index());
     }

@@ -18,13 +18,13 @@ public class Proposta {
   public int usuario_id;
   public Anuncio anuncio;
 
-  public Proposta(int id, String status, String descricao, Date data, int usuario_id, int anuncio_id){
+  public Proposta(int id, String status, String descricao, Date data, int usuario_id, Integer anuncio_id){
     this.id = id + Proposta.lastInsertedId++;
     this.status = status;
     this.usuario_id = usuario_id;
     this.descricao = descricao;
     this.data = data;
-    this.anuncio = Anuncio.findById(anuncio_id);
+    this.anuncio = Anuncio.find.byId(anuncio_id.doubleValue());
   }
 
   public Proposta() {

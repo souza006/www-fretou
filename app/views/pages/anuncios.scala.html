@@ -1,4 +1,4 @@
-@(anuncios: Set[Anuncio])
+@(anuncios: List[Anuncio])
 
 @main("Anúncio", "yes"){
 
@@ -9,12 +9,12 @@
         <div class="row mt-2">
             @for((anuncio, index) <- anuncios.zipWithIndex){
             <div class="card col-4 mt-2 border-0">
-                <img src='@routes.Assets.versioned("images/g1.jpg")' class="img-fluid" alt="Anúncio - @anuncio.getTitulo()">
+                <img src='@routes.Assets.versioned("images/g1.jpg")' class="img-fluid" alt="Anúncio - @anuncio.titulo">
                 <div class="card-body w3ls-card">
-                    <h5 class="card-title">@anuncio.getTitulo()</h5>
-                    <p class="card-text mb-3">Localização - UF <br /> @anuncio.propostas().size() proposta(s)</p>
+                    <h5 class="card-title">@anuncio.titulo</h5>
+                    <p class="card-text mb-3">Localização - UF <br /></p>
                     <div class="ab_button">
-                        <a href="@routes.AnuncioController.show(anuncio.getId())" class="btn btn-primary btn-lg hvr-underline-from-left">Ver anúncio</a>
+                        <a href="@routes.AnuncioController.show(anuncio.id)" class="btn btn-primary btn-lg hvr-underline-from-left">Ver anúncio</a>
                     </div>
                 </div>
             </div>

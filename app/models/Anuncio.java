@@ -28,14 +28,18 @@ public class Anuncio extends Model {
     @Id
     public Integer id;
     public Integer usuario_id;
-    private String titulo;
-    private String categoria;
-    private String descricao;
-    private String origem ;
-    private String destino;
-    private Double peso;
-    private Double valor;
+    public String titulo;
+    public String categoria;
+    public String descricao;
+    public String origem ;
+    public String destino;
+    public Double peso;
+    public Double valor;
     public Date data;
+
+    public String getDataFormatada() {
+        return new SimpleDateFormat("dd/MM/yyyy hh:mm").format(this.data);
+    }
 
     public static Finder<Double, Anuncio> find = new Finder<>(Anuncio.class);
 
