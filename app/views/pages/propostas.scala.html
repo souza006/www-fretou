@@ -43,7 +43,7 @@
               @for(proposta <- propostas){
                 <tr>
                   <th scope="row">@proposta.getId()</th>
-                  <td><a href="/usuario/proposta/@proposta.getId()">@proposta.anuncio().getTitulo()</a></td>
+                  <td><a href="/usuario/proposta/@proposta.getId()">@proposta.anuncio().titulo</a></td>
                     <td>por Usuário (@proposta.getUsuario_id())</td>
                     <td>@proposta.getStatus()</td>
                     <td>@proposta.getData()</td>

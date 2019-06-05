@@ -39,18 +39,18 @@
     <div class="col-12">
       <div class="row">
         <div class="col-6 text-center">
-          <h2>@anuncio.getTitulo()</h2>
-          <span>Usuário #@anuncio.getUsuarioId() (Id do Usuário)</span>
-          <p>Publicado em @anuncio.getData()</p>
+          <h2>@anuncio.titulo</h2>
+          <span>Usuário #@anuncio.usuario_id (Id do Usuário)</span>
+          <p>Publicado em @anuncio.data</p>
         </div>
         <div class="col-6 text-center">
-          <h3>Valor sugerido: R$ @anuncio.getValor()</h3>
+          <h3>Valor sugerido: R$ @anuncio.valor</h3>
           <button class="btn btn-lg btn-secondary" type="button" onclick="showPropostaForm()">Adicionar proposta</button>
         </div>
         <div class="col-12 d-none" id="propostaForm">
           <h3>Formulário de envio de propostas</h3>
 
-          @helper.form(action = routes.PropostaController.realizar(anuncio.getId()), 'id -> "formProposta") {
+          @helper.form(action = routes.PropostaController.realizar(anuncio.id), 'id -> "formProposta") {
           <div class="form-group">
             <label for="descricao">Descrição</label>
             <textarea name="descricao" id="descricao" cols="30" rows="10" class="form-control"></textarea>
@@ -65,7 +65,7 @@
             <img src="https://placehold.it/500x260" class="mx-4">
           </div>
           <div class="col-12 text-justify">
-            <p>@anuncio.getDescricao()</p>
+            <p>@anuncio.descricao</p>
           </div>
         </div>
       </div>
