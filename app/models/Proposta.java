@@ -18,17 +18,21 @@ public class Proposta {
   public int usuario_id;
   public Anuncio anuncio;
 
-  public Proposta(int id, String status, String descricao, Date data, int usuario_id, int anuncio_id){
+  public Proposta(int id, String status, String descricao, Date data, int usuario_id, Integer anuncio_id){
     this.id = id + Proposta.lastInsertedId++;
     this.status = status;
     this.usuario_id = usuario_id;
     this.descricao = descricao;
     this.data = data;
-    this.anuncio = Anuncio.findById(anuncio_id);
+    this.anuncio = Anuncio.find.byId(anuncio_id.doubleValue());
   }
 
   public Proposta() {
     this.status = STATUS_AGUARDANDO;
+  }
+
+  static {
+    propostas = new HashSet<>();
   }
 
   public void setId(int id){
@@ -80,17 +84,6 @@ public class Proposta {
   }
 
   private static Set<Proposta> propostas;
-
-  static {
-    propostas = new HashSet<>();
-    propostas.add(new Proposta(1, STATUS_AGUARDANDO, "Lorem Ipsum",  new Date(System.currentTimeMillis()), 1, 1) );
-    propostas.add(new Proposta(2, STATUS_AGUARDANDO, "Lorem Ipsum",  new Date(System.currentTimeMillis()), 1, 3) );
-    propostas.add(new Proposta(3, STATUS_AGUARDANDO, "Lorem Ipsum",  new Date(System.currentTimeMillis()), 1, 16) );
-    propostas.add(new Proposta(4, STATUS_AGUARDANDO, "Lorem Ipsum",  new Date(System.currentTimeMillis()), 1, 21) );
-    propostas.add(new Proposta(5, STATUS_AGUARDANDO, "Lorem Ipsum",  new Date(System.currentTimeMillis()), 1, 46) );
-    propostas.add(new Proposta(6, STATUS_AGUARDANDO, "Lorem Ipsum",  new Date(System.currentTimeMillis()), 1, 543) );
-  }
-
   public static Set<Proposta> all() {
     return propostas;
   }

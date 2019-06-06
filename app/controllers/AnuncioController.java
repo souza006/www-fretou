@@ -10,6 +10,7 @@ import play.mvc.*;
 import javax.inject.Inject;
 import java.text.ParseException;
 import java.util.Date;
+import java.util.List;
 import java.util.Set;
 import java.text.SimpleDateFormat;
 
@@ -31,8 +32,7 @@ public class AnuncioController extends Controller {
    */
 
     public Result index() {
-
-        Set<Anuncio> anuncios = Anuncio.all();
+        List<Anuncio> anuncios = Anuncio.find.all();
 
         return ok(views.html.pages.anuncios.render(anuncios));
     }
@@ -44,10 +44,10 @@ public class AnuncioController extends Controller {
     * @http: GET
    */
 
-    public Result show(int id) {
+    public Result show(Integer id) {
         Form propostaForm = formFactory.form(Proposta.class);
 
-        return ok(views.html.pages.anuncio.render(Anuncio.findById(id), propostaForm));
+        return ok(views.html.pages.anuncio.render(Anuncio.find.byId(id.doubleValue()), propostaForm));
     }
 
    /*
@@ -72,12 +72,22 @@ public class AnuncioController extends Controller {
     public Result store() throws ParseException {
         DynamicForm anuncioForm = formFactory.form().bindFromRequest();
 
-        Date data = new SimpleDateFormat("yyyy-MM-dd").parse(anuncioForm.get("data").toString());
+        //Date data = new SimpleDateFormat("yyyy-MM-dd").parse(anuncioForm.get("data").toString());
+        Date data = new Date(System.currentTimeMillis());
 
-        Anuncio.add(new Anuncio(Anuncio.lastInsertedId++, anuncioForm.get("titulo"), anuncioForm.get("categoria"),
-                Double.parseDouble(anuncioForm.get("valor")), Double.parseDouble(anuncioForm.get("peso")),
-                anuncioForm.get("descricao"), anuncioForm.get("origem"), anuncioForm.get("destino"),
-                Integer.parseInt(anuncioForm.get("usuario_id")), data));
+        Anuncio anuncio = new Anuncio();
+
+        anuncio.titulo = anuncioForm.get("titulo");
+        anuncio.categoria = anuncioForm.get("categoria");
+        anuncio.valor = Double.parseDouble(anuncioForm.get("valor"));
+        anuncio.peso = Double.parseDouble(anuncioForm.get("peso"));
+        anuncio.descricao = anuncioForm.get("descricao");
+        anuncio.origem = anuncioForm.get("origem");
+        anuncio.destino = anuncioForm.get("destino");
+        anuncio.usuario_id = Integer.parseInt(anuncioForm.get("usuario_id"));
+        anuncio.data = data;
+
+        anuncio.save();
 
         return redirect(routes.AnuncioController.index());
     }
