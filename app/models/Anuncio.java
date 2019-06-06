@@ -1,29 +1,59 @@
 package models;
 
 import java.util.*;
-import java.text.SimpleDateFormat;
 
 public class Anuncio {
 
+    public static String CATEGORIA_PERIGOSA = "perigosa";
+    public static String CATEGORIA_PESADA = "pesada";
+    public static String CATEGORIA_GRANEL = "granel";
+    public static String CATEGORIA_NEOGRANEL = "neogranel";
+
+    public static int lastInsertedId = 1;
+
+
+    public static String[] CATEGORIAS = {
+            CATEGORIA_PERIGOSA,
+            CATEGORIA_PESADA,
+            CATEGORIA_GRANEL,
+            CATEGORIA_NEOGRANEL
+    };
+
     public int id;
     public int usuario_id;
-    public String titulo;
-    public String descricao;
+    private String titulo;
+    private String categoria;
+    private String descricao;
+    private String origem ;
+    private String destino;
+    private double peso;
+    private double valor;
     public Date data;
 
-    public Anuncio(int id, String titulo, String descricao, Date data, int usuario_id){
+    public Anuncio(int id, String titulo, String categoria , double peso, double valor, String descricao,
+                   String origem , String destino, int usuario_id, Date data){
         this.id = id;
         this.titulo = titulo;
+        this.categoria = categoria;
         this.descricao = descricao;
-        this.data = data;
+        this.origem = origem;
+        this.destino = destino;
+        this.valor = valor;
+        this.peso = peso;
         this.usuario_id = usuario_id;
+        this.data = data;
         this.propostas = new HashSet<>();
     }
+
+    public Anuncio()
+    {
+        this.id = lastInsertedId;
+    }
+
 
     public void setId(int id){
         this.id = id;
     }
-
     public int getId(){
         return this.id;
     }
@@ -40,13 +70,33 @@ public class Anuncio {
 
     public String getTitulo() { return this.titulo; }
 
+    public void setCategoria(String categoria) {this.categoria = categoria;}
+
+    public String getCategoria() { return this.categoria; }
+
     public void setDescricao(String descricao) {this.descricao = descricao;}
 
     public String getDescricao() { return this.descricao; }
 
-    public void setData(Date data){ this.data = data; }
+    public void setOrigem(String origem) {this.origem = origem;}
 
-    public String getData() {String dt = new SimpleDateFormat("dd/MM/yyyy HH:mm").format(this.data); return dt;}
+    public String getOrigem() { return this.origem; }
+
+    public void setDestino(String destino) {this.destino = destino;}
+
+    public String getDestino() { return this.destino; }
+
+    public void setValor(double valor) {this.valor = valor;}
+
+    public double getValor() { return this.valor; }
+
+    public void setPeso(double peso) {this.peso = peso;}
+
+    public double getPeso() { return this.peso; }
+
+    public void setData(Date data) {this.data = data;}
+
+    public Date getData() { return this.data; }
 
     private static Set<Anuncio> anuncios;
     private Set<Proposta> propostas;
@@ -54,12 +104,15 @@ public class Anuncio {
     static {
 
         anuncios = new HashSet<>();
-        anuncios.add(new Anuncio(1,"Anúncio - " + 1, "Descrição incrível - " + 1, new Date(System.currentTimeMillis()), 1));
-        anuncios.add(new Anuncio(3,"Anúncio - " + 3, "Descrição incrível - " + 3, new Date(System.currentTimeMillis()), 3) );
-        anuncios.add(new Anuncio(46,"Anúncio - " + 46, "Descrição incrível - " + 46, new Date(System.currentTimeMillis()), 46) );
-        anuncios.add(new Anuncio(16,"Anúncio - " + 16, "Descrição incrível - " + 16, new Date(System.currentTimeMillis()), 16) );
-        anuncios.add(new Anuncio(543,"Anúncio - " + 543, "Descrição incrível - " + 543, new Date(System.currentTimeMillis()), 543) );
-        anuncios.add(new Anuncio(21,"Anúncio - " + 21, "Descrição incrível - " + 21, new Date(System.currentTimeMillis()), 21) );
+
+        // new Anuncio(int id, String titulo, String categoria , double peso , String descricao, double valor, String origem , String destino ,int usuario_id )
+
+        anuncios.add(new Anuncio(lastInsertedId++,"Carga d'água - " + 1, "Pesada- "  + 1, 0.25 ,  0.2 , "- oi tudobom -", "Casa" , "natal" , 1, new Date()));
+        /*anuncios.add(new Anuncio(3,"Anúncio - " + 3, "Descrição incrível - " + 3, 3) );
+        anuncios.add(new Anuncio(46,"Anúncio - " + 46, "Descrição incrível - " + 46, 46) );
+        anuncios.add(new Anuncio(16,"Anúncio - " + 16, "Descrição incrível - " + 16, 16) );
+        anuncios.add(new Anuncio(543,"Anúncio - " + 543, "Descrição incrível - " + 543, 543) );
+        anuncios.add(new Anuncio(21,"Anúncio - " + 21, "Descrição incrível - " + 21, 21) );**/
         for (Anuncio anuncio: anuncios)
             anuncio.generatePropostas();
     }
@@ -77,6 +130,11 @@ public class Anuncio {
         return null;
     }
 
+    public static void add(Anuncio a)
+    {
+        anuncios.add(a);
+    }
+
     public void addProposta(Proposta proposta)
     {
         this.propostas.add(proposta);
@@ -86,12 +144,16 @@ public class Anuncio {
 
     private void generatePropostas()
     {
-        this.propostas.add(new Proposta(this.id + 1, Proposta.STATUS_AGUARDANDO, "Lorem Ipsum", new Date(System.currentTimeMillis()), 1, this.id) );
-        this.propostas.add(new Proposta(this.id + 3, Proposta.STATUS_AGUARDANDO, "Lorem Ipsum", new Date(System.currentTimeMillis()), 2531, this.id) );
-        this.propostas.add(new Proposta(this.id + 46, Proposta.STATUS_AGUARDANDO, "Lorem Ipsum", new Date(System.currentTimeMillis()), 2031, this.id) );
-        this.propostas.add(new Proposta(this.id + 16, Proposta.STATUS_AGUARDANDO, "Lorem Ipsum", new Date(System.currentTimeMillis()), 221, this.id) );
-        this.propostas.add(new Proposta(this.id + 543, Proposta.STATUS_AGUARDANDO, "Lorem Ipsum", new Date(System.currentTimeMillis()), 2135, this.id) );
-        this.propostas.add(new Proposta(this.id + 21, Proposta.STATUS_AGUARDANDO, "Lorem Ipsum", new Date(System.currentTimeMillis()), 3234, this.id) );
+        this.propostas.add(new Proposta(this.id + 1, Proposta.STATUS_AGUARDANDO, "Lorem Ipsum", new Date(),1, this.id) );
+        this.propostas.add(new Proposta(this.id + 3, Proposta.STATUS_AGUARDANDO, "Lorem Ipsum", new Date(),2531, this.id) );
+        this.propostas.add(new Proposta(this.id + 46, Proposta.STATUS_AGUARDANDO, "Lorem Ipsum", new Date(),2031, this.id) );
+        this.propostas.add(new Proposta(this.id + 16, Proposta.STATUS_AGUARDANDO, "Lorem Ipsum", new Date(),221, this.id) );
+        this.propostas.add(new Proposta(this.id + 543, Proposta.STATUS_AGUARDANDO, "Lorem Ipsum", new Date(),2135, this.id) );
+        this.propostas.add(new Proposta(this.id + 21, Proposta.STATUS_AGUARDANDO, "Lorem Ipsum", new Date(),3234, this.id) );
+
+    }
+
+    public static void criarAnuncio(Anuncio novo) {
 
     }
 }
