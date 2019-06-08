@@ -13,7 +13,7 @@ body {
 
 p {
     margin: 0;
-    color:red;
+    color:black;
     font-size: 15px;
     line-height: 1.8;
 }
@@ -88,7 +88,7 @@ a.navbar-brand {
     font-size: 1em;
     letter-spacing: 1px;
     display: initial;
-	font-family: 'Rubik', sans-serif;
+	font-family: 'Lobster', cursive;
 	color:#000;
 }
 
@@ -1580,4 +1580,8 @@ h3.tittle-w3ls {
 .btn-aceitar-proposta:hover {
     background-color: white;
     color: green;
+}
+.column {
+  float: right;
+  width: 33.33%;
 }

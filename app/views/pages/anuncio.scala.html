@@ -1,6 +1,74 @@
 @(anuncio: Anuncio, propostaForm: Form[Proposta])
 @import helper._
 
+
+
+@main("Título do Anuncio","no", scripts){
+<div class="container my-5">
+  <div class="row">
+    <div class="col-8">
+      <h2>@anuncio.titulo</h2><br>
+      <span>Usuário #@anuncio.usuario_id (Id do Usuário)</span><br>
+      <span>Publicado em @anuncio.data</span>
+      <div class="row">
+
+        <div class="col">
+              <!-- alinhamento-->
+            </div>
+            <div class="col">
+              <p class="lead text-justify"><b>Descrição:</b> @anuncio.descricao</p><br><br>
+              <p class="lead text-justify"><b>Destino:</b> @anuncio.origem</p>
+              <br>
+              <p class="lead text-justify"><b>Destino:</b>@anuncio.destino</p><br>
+              <p class="lead text-justify"><b>Peso:</b>@anuncio.peso</p>
+              <br>
+            </div>
+          </div>
+            <br>
+        <div class="col-12 d-none" id="propostaForm">
+          <h3>Formulário de envio de propostas</h3>
+
+          @helper.form(action = routes.PropostaController.realizar(anuncio.id), 'id -> "formProposta") {
+          <div class="form-group">
+            <label for="descricao">Descrição</label>
+            <textarea style="resize: none;" name="descricao" id="descricao" cols="30" rows="10" class="form-control"></textarea>
+          </div>
+
+          <button class="btn btn-outline-success float-right" id="enviar-proposta-button">Enviar proposta</button>
+          }
+        </div>
+          <!-- <div class="col-12 my-3"> 
+            <img src="https://placehold.it/500x260" class="mx-2">
+          </div><br> -->
+          <div id="carouselFritou" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                            <img src="https://placehold.it/500x260" class="img-fluid d-block">
+
+              </div>
+              <div class="carousel-item">
+                            <img src="https://placehold.it/500x260" class="img-fluid d-block">
+
+              </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselFritou" role = "button" data-slide = "prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Anterior</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselFritou" role = "button" data-slide = "next" aria-hidden="true">
+              <span class="carousel-control-next-icon"></span>
+              <span class="sr-only">Proximo</span>
+            </a>
+          </div><br>
+          <div class="col-6 text-center">
+          <h4>Valor sugerido: R$ @anuncio.valor</h4><br>
+        </div>
+        <button class="btn btn-outline-primary float-right" type="button" onclick="showPropostaForm()">Adicionar proposta</button>
+        </div>
+      </div>
+    </div>
+
+}
 @scripts = {
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@@8"></script>
 <script type="text/javascript">
@@ -31,48 +99,4 @@
     document.getElementById('enviar-proposta-button').addEventListener('click', submeterProposta, false);
   </script>
 
-}
-
-@main("Título do Anuncio","no", scripts){
-<div class="container my-5">
-  <div class="row">
-    <div class="col-12">
-      <div class="row">
-        <div class="col-6 text-center">
-          <h2>@anuncio.titulo</h2>
-          <span>Usuário #@anuncio.usuario_id (Id do Usuário)</span>
-          <p>Publicado em @anuncio.data</p>
-          <h4>Peso @anuncio.peso</h4><br>
-          <span>Local de Retirada: @anuncio.origem</span><br>
-          <span>destino da entrega: @anuncio.destino</span><br>
-        </div>
-        <div class="col-12 text-justify">
-            <textbox class="text-justify">@anuncio.descricao</textbox>
-          </div>
-        <div class="col-12 d-none" id="propostaForm">
-          <h3>Formulário de envio de propostas</h3>
-
-          @helper.form(action = routes.PropostaController.realizar(anuncio.id), 'id -> "formProposta") {
-          <div class="form-group">
-            <label for="descricao">Descrição</label>
-            <textarea name="descricao" id="descricao" cols="30" rows="10" class="form-control"></textarea>
-          </div>
-
-          <button class="btn btn-primary" id="enviar-proposta-button">Enviar proposta</button>
-          }
-        </div>
-        <div class="row">
-          <div class="col-12 my-3">
-            <img src="https://placehold.it/500x260" class="mx-4">
-            <img src="https://placehold.it/500x260" class="mx-4">
-          </div><br>
-          <div class="col-6 text-center">
-          <h3>Valor sugerido: R$ @anuncio.valor</h3><br>
-          <button class="btn btn-lg btn-secondary" type="button" onclick="showPropostaForm()">Adicionar proposta</button>
-        </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
 }

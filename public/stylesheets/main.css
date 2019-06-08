@@ -1,5 +1,6 @@
 /* navmenu */
 @import url('https://fonts.googleapis.com/css?family=Roboto+Mono');
+@import url('https://fonts.googleapis.com/css?family=Lobster&display=swap');
 .navmenu {
   height: fit-content;
   display: flex;
