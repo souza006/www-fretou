@@ -12,9 +12,18 @@
                 <img src='@routes.Assets.versioned("images/g1.jpg")' class="img-fluid" alt="Anúncio - @anuncio.titulo">
                 <div class="card-body w3ls-card">
                     <h5 class="card-title">@anuncio.titulo</h5>
-                    <p class="card-text mb-3">Localização - UF <br /></p>
-                    <div class="ab_button">
-                        <a href="@routes.AnuncioController.show(anuncio.id)" class="btn btn-primary btn-lg hvr-underline-from-left">Ver anúncio</a>
+                    <div class="card-text mb-3">
+                        <p>Localização - UF</p>
+                        <div class="row mt-2">
+                            <div class="col-6">
+                                <div class="ab_button">
+                                    <a href="@routes.AnuncioController.show(anuncio.id)" class="btn btn-primary btn-lg hvr-underline-from-left">Ver anúncio</a>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <p class="lead">@anuncio.propostas.size proposta(s)</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
